@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "status_date": "2026-07-17",
+  "projects": [
+    {
+      "name": "ESP32 RPS Game",
+      "repo": "https://github.com/rongyishuaige7/ESP32_RPS_Game",
+      "default_branch": "main",
+      "head_sha": "7cc39bd4ace77febee17320fe8a2efd8ac06b205",
+      "platform": "ESP32-S3 · C++ · PlatformIO · OV3660",
+      "summary": "基于摄像头手势识别的剪刀石头布硬件游戏，包含 OLED、音频、RGB 反馈与可选 MJPEG 推流。",
+      "build": {
+        "status": "passed",
+        "run_url": "https://github.com/rongyishuaige7/ESP32_RPS_Game/actions/runs/29339478819",
+        "head_sha": "7cc39bd4ace77febee17320fe8a2efd8ac06b205",
+        "artifact_retention_days": 14
+      },
+      "hardware_retest": {
+        "status": "not_retested",
+        "date": null,
+        "note": "当前默认分支已完成固件编译验证；未发现与当前提交绑定的日期化真机复测记录。"
+      },
+      "media_scope": "当前仓库未公开实物照片、演示视频或 EDA/制造文件。",
+      "known_boundaries": [
+        "CI 只证明固定配置下的固件构建和 Artifact 上传。",
+        "板型、引脚或摄像头配置变化后仍需重新烧录并核对实物。",
+        "Actions Artifact 会按 14 天保留策略过期，不是永久下载。"
+      ]
+    },
+    {
+      "name": "Multimodal Smart Pot",
+      "repo": "https://github.com/rongyishuaige7/esp32-s3-multimodal-smart-pot",
+      "default_branch": "main",
+      "head_sha": "aacb1c0c3beb4add79a740d838166c63cf95b10c",
+      "platform": "ESP32-S3 · C++ · PlatformIO · FreeRTOS · EasyEDA",
+      "summary": "多模态桌面智能花盆原型，覆盖环境感知、双泵灌溉、本地彩屏、局域网控制、语音与手势交互。",
+      "build": {
+        "status": "passed",
+        "run_url": "https://github.com/rongyishuaige7/esp32-s3-multimodal-smart-pot/actions/runs/29518255431",
+        "head_sha": "aacb1c0c3beb4add79a740d838166c63cf95b10c",
+        "artifact_retention_days": 14
+      },
+      "hardware_retest": {
+        "status": "historical_evidence_only",
+        "date": "2026-04-16",
+        "note": "两张历史照片显示定制 PCB、传感器读数、本地彩屏和配套 App 界面；当前公开提交未重新刷写并逐项真机验收。"
+      },
+      "media_scope": "公开两张去除 EXIF/GPS 的历史实物照片，以及原理图 PDF、EasyEDA PCB JSON、BOM 和 Gerber/钻孔文件；没有演示视频，App 源码未找回。",
+      "known_boundaries": [
+        "历史照片不证明当前公开提交已经完成真机复测。",
+        "EDA 的 JSN-SR04T 引脚与公开固件不一致。",
+        "EDA 控制器标注与当前 PlatformIO 4 MB Flash 配置存在版本边界。",
+        "局域网 HTTP 控制无认证和加密，不应直接暴露公网。"
+      ]
+    },
+    {
+      "name": "STM32 Multisensor Data Acquisition",
+      "repo": "https://github.com/rongyishuaige7/stm32-multisensor-data-acquisition",
+      "default_branch": "main",
+      "head_sha": "850fb32b667f43c4f7ecdb5ebbb014b91b70a96f",
+      "platform": "STM32F103 · C · PlatformIO · STM32Cube HAL · W25Q64 · ESP-01S",
+      "summary": "多传感器数据采集教学原型，包含 Flash 历史与离线缓存、ESP-01S AT 联网、TCP JSON 工具、OLED 与告警。",
+      "build": {
+        "status": "passed",
+        "run_url": "https://github.com/rongyishuaige7/stm32-multisensor-data-acquisition/actions/runs/29521309526",
+        "head_sha": "850fb32b667f43c4f7ecdb5ebbb014b91b70a96f",
+        "artifact_retention_days": 14
+      },
+      "hardware_retest": {
+        "status": "not_retested",
+        "date": null,
+        "note": "Source-confirmed · Build-verified · Current hardware re-test not run。"
+      },
+      "media_scope": "当前没有实物照片、演示视频、EDA、PCB 或制造文件；公开 BOM 和接线边界图，接线图不是 PCB 原理图。",
+      "known_boundaries": [
+        "ESP-01S=USART1、调试串口=USART2 是源码级裁决，仍需实物确认。",
+        "E3Z-LS63、A1104、FSR402 和蜂鸣器接口仍有待实物确认的电气边界。",
+        "TCP 仅面向可信局域网，无认证和 TLS。",
+        "Actions Artifact 会按 14 天保留策略过期，不是永久下载。"
+      ]
+    }
+  ]
+}
