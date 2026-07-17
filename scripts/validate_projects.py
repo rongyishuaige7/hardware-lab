@@ -16,7 +16,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 PROJECTS_FILE = ROOT / "projects.yml"
 README_FILE = ROOT / "README.md"
-EXPECTED_PROJECT_COUNT = 7
+EXPECTED_PROJECT_COUNT = 8
 SHA_RE = re.compile(r"^[0-9a-f]{40}$")
 REPO_RE = re.compile(r"^https://github\.com/([^/]+)/([^/]+)$")
 RUN_RE = re.compile(
@@ -183,6 +183,9 @@ def validate_readme(projects: list[dict[str, Any]]) -> None:
     if f"当前收录 {len(projects)} 个公开项目" not in readme:
         fail("README project count is not synchronized with projects.yml")
     for project in projects:
+        heading = f"### [{project['name']}]({project['repo']})"
+        if heading not in readme:
+            fail(f"README must use the indexed Chinese project name: {project['name']}")
         for value in (
             project["repo"],
             project["build"]["run_url"],

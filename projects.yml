@@ -182,6 +182,32 @@
         "SG90 没有位置或门锁状态反馈，202 响应只表示 PWM 任务已下发。",
         "当前 Raspberry Pi 型号、两块 RC522、舵机供电及可选 OLED 等仍需按实物确认；Actions Artifact 仅保留 14 天。"
       ]
+    },
+    {
+      "name": "STM32 触摸与隔空手势控制系统",
+      "repo": "https://github.com/rongyishuaige7/stm32-touch-gesture-control-system",
+      "default_branch": "main",
+      "head_sha": "92ab1128ac3a106ff52550d7375e8c6d20cdface",
+      "platform": "STM32F103 · C++ · PlatformIO · STM32Cube HAL · TTP223 · APDS-9960 · ESP-01S",
+      "summary": "使用四路电容触摸和 APDS-9960 隔空手势控制四路 LED，并通过 ESP-01S 本地热点展示状态与诊断的教学原型。",
+      "build": {
+        "status": "passed",
+        "run_url": "https://github.com/rongyishuaige7/stm32-touch-gesture-control-system/actions/runs/29566341512",
+        "head_sha": "92ab1128ac3a106ff52550d7375e8c6d20cdface",
+        "artifact_retention_days": 14
+      },
+      "hardware_retest": {
+        "status": "not_retested",
+        "date": null,
+        "note": "源码来源、硬件无关源码契约与 PlatformIO 干净构建已验证；当前 STM32、TTP223、APDS-9960、ESP-01S 与 LED 整机尚未重新真机复测。"
+      },
+      "media_scope": "当前没有实物照片、演示视频、EDA、PCB 或制造文件；已公开 BOM、接线边界图、协议、来源与验证说明。",
+      "known_boundaries": [
+        "构建和源码契约不证明触摸可靠性、APDS 识别率、ESP AT 兼容性或实际 LED 行为。",
+        "HTTP 无认证和 TLS，只面向隔离可信的教学热点。",
+        "GPIO 不得直接驱动继电器、灯带、电机或市电负载。",
+        "Actions Artifact 会按 14 天保留策略过期，不是永久下载。"
+      ]
     }
   ]
 }

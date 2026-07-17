@@ -2,7 +2,7 @@
 
 我独立完成的软硬件原型索引。这里优先展示源码、可复现构建、实物/媒体证据和当前真机复测范围，不把“编译通过”写成“硬件已验证”。
 
-> **状态日期：2026-07-17。** 当前收录 7 个公开项目。每个固定 Actions 链接都对应所列默认分支 HEAD；Actions Artifact 仅保留 14 天，不是永久下载。
+> **状态日期：2026-07-17。** 当前收录 8 个公开项目。每个固定 Actions 链接都对应所列默认分支 HEAD；Actions Artifact 仅保留 14 天，不是永久下载。
 
 ## 项目
 
@@ -75,6 +75,16 @@
 - **真机状态：** Source-confirmed · Python tests passed · Qt 5/6 client build-verified · Historical UI demonstrated on 2026-04-03 · Current Raspberry Pi and end-to-end hardware re-test not run。
 - **公开范围：** 四张去元数据并遮盖私网 IP/UID 的历史界面截图、BOM、接线边界图、服务端、Qt 客户端和数据库 schema；当前没有实物照片、演示视频、EDA 或制造文件。
 - **边界：** 自定义 TCP 无 TLS，RC522 UID 可复制，SG90 无位置反馈；仅限隔离可信局域网教学原型，不是生产门禁系统。
+
+### [STM32 触摸与隔空手势控制系统](https://github.com/rongyishuaige7/stm32-touch-gesture-control-system)
+
+使用四路电容触摸和 APDS-9960 隔空手势控制四路 LED，并通过 ESP-01S 本地热点展示状态与诊断的教学原型。
+
+- **平台：** STM32F103 · C++ · PlatformIO · STM32Cube HAL · TTP223 · APDS-9960 · ESP-01S
+- **构建证据：** [`92ab1128ac3a`](https://github.com/rongyishuaige7/stm32-touch-gesture-control-system/commit/92ab1128ac3a106ff52550d7375e8c6d20cdface) · [Actions 成功](https://github.com/rongyishuaige7/stm32-touch-gesture-control-system/actions/runs/29566341512)
+- **真机状态：** 源码来源、硬件无关源码契约与 PlatformIO 干净构建已验证；当前 STM32、TTP223、APDS-9960、ESP-01S 与 LED 整机尚未重新真机复测。
+- **公开范围：** 当前没有实物照片、演示视频、EDA、PCB 或制造文件；已公开 BOM、接线边界图、协议、来源与验证说明。
+- **边界：** 构建和源码契约不证明触摸可靠性、APDS 识别率、ESP AT 兼容性或实际 LED 行为；HTTP 无认证和 TLS，仅限隔离可信的教学热点，GPIO 不得直接驱动大电流或市电负载。
 
 ## 状态口径
 
