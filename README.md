@@ -2,7 +2,7 @@
 
 我独立完成的软硬件原型索引。这里优先展示源码、可复现构建、实物/媒体证据和当前真机复测范围，不把“编译通过”写成“硬件已验证”。
 
-> **状态日期：2026-07-17。** 当前收录 9 个公开项目。每个固定 Actions 链接都对应所列默认分支 HEAD；Actions Artifact 仅保留 14 天，不是永久下载。
+> **状态日期：2026-07-17。** 当前收录 10 个公开项目。每个固定 Actions 链接都对应所列默认分支 HEAD；Actions Artifact 仅保留 14 天，不是永久下载。
 
 ## 项目
 
@@ -96,6 +96,16 @@
 - **真机状态：** 源码来源、硬件无关源码契约、ESP32 固件与 Flutter 客户端构建已验证；当前 ESP32、OLED、DHT11、PIR、MAX98357A、实体按键及 Flutter App 端到端链路尚未重新真机复测。
 - **公开范围：** 当前没有实物照片、演示视频、EDA、PCB 或制造文件；已公开 BOM、接线边界图、协议、来源与验证说明。原始 WAV 的再分发许可未逐一确认，当前仓库不分发音频素材。
 - **边界：** AP 配网和 STA REST 均使用无认证、无 TLS 的本地 HTTP，只限隔离可信局域网；没有使用者自备的合法 WAV 时，声音功能不会完成。构建不等同于 NTP、传感器、OLED、I²S、按钮、Wi-Fi 或 App 端到端验证。
+
+### [ESP32 智能药盒](https://github.com/rongyishuaige7/esp32-smart-pillbox)
+
+基于 ESP32、双 PIR、双 HX711、RGB/蜂鸣器与 Flutter 局域网客户端的智能药盒教学原型。
+
+- **平台：** ESP32 · Arduino · PlatformIO · Flutter · PIR · HX711 · SPIFFS · HTTP
+- **构建证据：** [`aab0b8d1dc0d`](https://github.com/rongyishuaige7/esp32-smart-pillbox/commit/aab0b8d1dc0da455468df41eb3920dd677b4cefe) · [Actions 成功](https://github.com/rongyishuaige7/esp32-smart-pillbox/actions/runs/29573085427)
+- **真机状态：** 源码来源、硬件无关源码契约、ESP32 固件与 Flutter 客户端构建已验证；当前 ESP32、两个 PIR、两个 HX711、RGB、蜂鸣器、SPIFFS、Wi-Fi、NTP 与 Flutter App 端到端链路尚未重新真机复测。
+- **公开范围：** 当前没有公开实物照片、演示视频、原理图、PCB、Gerber 或制造文件；已公开 BOM、源码推导接线边界图、协议、来源与验证说明。
+- **边界：** 原型状态机不构成服药确认、诊断、护理、医疗结论或紧急处置。AP 配网和 STA REST 均使用无认证、无 TLS 的本地 HTTP，只限隔离可信局域网；构建不等同于 PIR、HX711、RGB、蜂鸣器、SPIFFS、Wi-Fi、NTP 或 App 端到端验证。
 
 ## 状态口径
 
