@@ -446,6 +446,32 @@
         "CI 不上传构建产物。固定 Actions run 只证明公开范围扫描、仓库检查、源码契约和固定构建；不证明真机、网络、传感器、实体执行器、机械位置或电气安全。",
         "本项目不是化妆品/皮肤/UV/健康判断、门禁/电子锁/防盗/认证、远程控制、安全或生产系统。"
       ]
+    },
+    {
+      "name": "基于ESP32-C3的多传感器健康数据展示手环原型",
+      "repo": "https://github.com/rongyishuaige7/esp32-c3-smart-band",
+      "default_branch": "main",
+      "head_sha": "6d6ceb503b95ed4d8e5481cca8e4bf8dea1e9595",
+      "platform": "ESP32-C3 · Arduino · PlatformIO · NimBLE · Flutter · MAX30102 · MPU6050 · DS18B20 · GPS · SSD1306",
+      "summary": "基于 ESP32-C3、MAX30102、MPU6050、DS18B20、GPS、OLED 与 Flutter BLE 客户端的多传感器数据展示教学原型。",
+      "build": {
+        "status": "passed",
+        "run_url": "https://github.com/rongyishuaige7/esp32-c3-smart-band/actions/runs/29616713831",
+        "head_sha": "6d6ceb503b95ed4d8e5481cca8e4bf8dea1e9595",
+        "artifact_retention_days": null
+      },
+      "hardware_retest": {
+        "status": "not_retested",
+        "date": null,
+        "note": "公开范围扫描、仓库检查、10 项源码契约、ESP32-C3 默认与 vibration opt-in PlatformIO 构建，以及 Flutter format/test/analyze/debug APK 已由 exact-HEAD CI 验证；当前 ESP32-C3、MAX30102、MPU6050、DS18B20、GPS、OLED、BLE 与 Android 客户端尚未按当前公开提交重新真机复测。"
+      },
+      "media_scope": "当前未公开实物照片、演示视频、原理图、PCB、EDA、Gerber 或制造文件；已公开固件、Flutter 客户端、BOM、源码推导接线边界、BLE 协议、来源、状态与验证说明。",
+      "known_boundaries": [
+        "MAX30102 光学脉搏/血氧仅为未校准教学估算，DS18B20 仅表示温度模块读数，MPU6050 阈值事件不是跌倒检测；本项目不是医疗、健康监护、诊断、告警或消费级可穿戴产品。",
+        "GPS 坐标不向 App 传输或展示，但这不代表 GPS 模块不接收位置或没有位置隐私风险；不得用于人员、宠物、车辆或资产追踪。",
+        "BLE 服务 UUID 与广播名不是设备身份；公开代码没有 pairing、bonding、MITM、防重放、加密、认证或授权，通知不承诺可靠送达。",
+        "CI 不上传构建产物。固定 Actions run 只证明公开范围门禁和隔离构建，不证明烧录、传感器、OLED、GPS、BLE、Android、电池、马达、佩戴或电气安全。"
+      ]
     }
   ]
 }
