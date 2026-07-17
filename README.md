@@ -2,7 +2,7 @@
 
 我独立完成的软硬件原型索引。这里优先展示源码、可复现构建、实物/媒体证据和当前真机复测范围，不把“编译通过”写成“硬件已验证”。
 
-> **状态日期：2026-07-17。** 当前收录 6 个公开项目。每个固定 Actions 链接都对应所列默认分支 HEAD；Actions Artifact 仅保留 14 天，不是永久下载。
+> **状态日期：2026-07-17。** 当前收录 7 个公开项目。每个固定 Actions 链接都对应所列默认分支 HEAD；Actions Artifact 仅保留 14 天，不是永久下载。
 
 ## 项目
 
@@ -46,15 +46,25 @@
 - **公开范围：** 当前没有实物照片、演示视频、App 截图、EDA、PCB 或制造文件；公开 BOM 和接线边界图，接线图不是 PCB 原理图。
 - **边界：** QUERY 不能唤醒深睡标签，定位只确认命令下发到网关；HTTP 与 LoRa 均无认证或加密，仅限隔离可信局域网教学环境。
 
-### [Adaptive Traffic Signal System](https://github.com/rongyishuaige7/adaptive-traffic-signal-system)
+### [车流量自适应交通信号控制系统](https://github.com/rongyishuaige7/adaptive-traffic-signal-system)
 
 四路 ESP32-CAM 车流量自适应交通信号教学原型，包含 YOLOv8 跟踪/过线计数、FastAPI、Vue 3、WebSocket、12 路信号灯和四块 OLED。
 
 - **平台：** ESP32-CAM × 4 · ESP32 · YOLOv8 · FastAPI · Vue 3 · WebSocket
-- **构建证据：** [`2deecbf6f063`](https://github.com/rongyishuaige7/adaptive-traffic-signal-system/commit/2deecbf6f063c3f57ab4ab2bbf05e8edd0e2da4e) · [Actions 成功](https://github.com/rongyishuaige7/adaptive-traffic-signal-system/actions/runs/29552967595)
-- **真机状态：** Source-confirmed · Backend tests passed · Frontend build-verified · N/S/E/W ESP32-CAM and ESP32 main build-verified · Current five-board and end-to-end hardware re-test not run。
+- **构建证据：** [`9526890934fa`](https://github.com/rongyishuaige7/adaptive-traffic-signal-system/commit/9526890934fa5488677493333e2637bd717141e5) · [Actions 成功](https://github.com/rongyishuaige7/adaptive-traffic-signal-system/actions/runs/29563350321)
+- **真机状态：** 源码已确认；后端测试、Vue 前端构建、东南西北四路 ESP32-CAM 和 ESP32 主控构建已通过；当前五板实物与端到端链路尚未重新真机复测。
 - **公开范围：** FastAPI/Vue 源码、双固件、模拟器、BOM 和接线边界图；当前没有真实实物照片、演示视频、界面截图、EDA 或制造文件。
 - **边界：** 模拟器和构建不证明检测准确率、物理灯态或道路安全；接口无认证/TLS，仅限隔离可信局域网桌面教学模型，不能用于真实道路信号控制。
+
+### [ESP32-S3 健康科普语音终端](https://github.com/rongyishuaige7/esp32-s3-health-voice-terminal)
+
+基于本地唤醒、讯飞流式 ASR/TTS、DeepSeek SSE、双 I²S 音频和 LVGL 显示的健康科普语音终端教学原型。
+
+- **平台：** ESP32-S3 · ESP-IDF · ESP-SR · 讯飞 · DeepSeek · LVGL · FreeRTOS
+- **构建证据：** [`d7b6d8d48945`](https://github.com/rongyishuaige7/esp32-s3-health-voice-terminal/commit/d7b6d8d48945fc149f0df3e0ca44e16c1e31252d) · [Actions 成功](https://github.com/rongyishuaige7/esp32-s3-health-voice-terminal/actions/runs/29563950558)
+- **真机状态：** 源码、硬件无关契约与 ESP-IDF 5.5.2 干净构建已验证；当前 ESP32-S3、INMP441、MAX98357A、ST7789 与真实云端链路尚未重新真机复测。
+- **公开范围：** 当前未公开真实实物照片、演示视频、EDA、PCB 或制造文件；已公开 BOM、接线边界图、协议、来源与验证说明。
+- **边界：** CI 使用空凭据，构建和源码契约不证明真实讯飞/DeepSeek 调用、ASR/TTS、首包延迟、语音质量或硬件行为；这不是医疗器械、诊断、处方或急救系统，Actions Artifact 仅保留 14 天。
 
 ### [Raspberry Pi RFID Room-card System](https://github.com/rongyishuaige7/raspberry-pi-rfid-room-card-system)
 

@@ -16,7 +16,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 PROJECTS_FILE = ROOT / "projects.yml"
 README_FILE = ROOT / "README.md"
-EXPECTED_PROJECT_COUNT = 6
+EXPECTED_PROJECT_COUNT = 7
 SHA_RE = re.compile(r"^[0-9a-f]{40}$")
 REPO_RE = re.compile(r"^https://github\.com/([^/]+)/([^/]+)$")
 RUN_RE = re.compile(

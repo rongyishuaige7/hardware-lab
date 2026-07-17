@@ -106,22 +106,22 @@
       ]
     },
     {
-      "name": "Adaptive Traffic Signal System",
+      "name": "车流量自适应交通信号控制系统",
       "repo": "https://github.com/rongyishuaige7/adaptive-traffic-signal-system",
       "default_branch": "main",
-      "head_sha": "2deecbf6f063c3f57ab4ab2bbf05e8edd0e2da4e",
+      "head_sha": "9526890934fa5488677493333e2637bd717141e5",
       "platform": "ESP32-CAM × 4 · ESP32 · YOLOv8 · FastAPI · Vue 3 · WebSocket",
       "summary": "四路 ESP32-CAM 车流量自适应交通信号教学原型，包含 YOLOv8 跟踪/过线计数、FastAPI、Vue 3、WebSocket、12 路信号灯和四块 OLED。",
       "build": {
         "status": "passed",
-        "run_url": "https://github.com/rongyishuaige7/adaptive-traffic-signal-system/actions/runs/29552967595",
-        "head_sha": "2deecbf6f063c3f57ab4ab2bbf05e8edd0e2da4e",
+        "run_url": "https://github.com/rongyishuaige7/adaptive-traffic-signal-system/actions/runs/29563350321",
+        "head_sha": "9526890934fa5488677493333e2637bd717141e5",
         "artifact_retention_days": 14
       },
       "hardware_retest": {
         "status": "not_retested",
         "date": null,
-        "note": "Source-confirmed · Backend tests passed · Frontend build-verified · Four ESP32-CAM direction builds and ESP32 main build-verified · Current five-board and end-to-end hardware re-test not run。"
+        "note": "源码已确认；后端测试、Vue 前端构建、东南西北四路 ESP32-CAM 和 ESP32 主控构建已通过；当前五板实物与端到端链路尚未重新真机复测。"
       },
       "media_scope": "当前没有真实实物照片、演示视频、界面截图、EDA 或制造文件；公开 BOM、接线边界图、FastAPI/Vue 源码、双固件和模拟器。",
       "known_boundaries": [
@@ -129,6 +129,32 @@
         "HTTP、MJPEG 与 WebSocket 无认证或 TLS，仅限隔离可信局域网教学环境。",
         "设备 WebSocket 客户数不是设备身份、命令 ACK 或物理灯态反馈。",
         "不能用于真实道路信号控制；Actions Artifact 仅保留 14 天。"
+      ]
+    },
+    {
+      "name": "ESP32-S3 健康科普语音终端",
+      "repo": "https://github.com/rongyishuaige7/esp32-s3-health-voice-terminal",
+      "default_branch": "main",
+      "head_sha": "d7b6d8d48945fc149f0df3e0ca44e16c1e31252d",
+      "platform": "ESP32-S3 · ESP-IDF · ESP-SR · 讯飞 · DeepSeek · LVGL · FreeRTOS",
+      "summary": "基于本地唤醒、讯飞流式 ASR/TTS、DeepSeek SSE、双 I²S 音频和 LVGL 显示的健康科普语音终端教学原型。",
+      "build": {
+        "status": "passed",
+        "run_url": "https://github.com/rongyishuaige7/esp32-s3-health-voice-terminal/actions/runs/29563950558",
+        "head_sha": "d7b6d8d48945fc149f0df3e0ca44e16c1e31252d",
+        "artifact_retention_days": 14
+      },
+      "hardware_retest": {
+        "status": "not_retested",
+        "date": null,
+        "note": "源码、硬件无关契约与 ESP-IDF 5.5.2 干净构建已验证；当前 ESP32-S3、INMP441、MAX98357A、ST7789 与真实云端链路尚未重新真机复测。"
+      },
+      "media_scope": "当前未公开真实实物照片、演示视频、EDA、PCB 或制造文件；已公开 BOM、接线边界图、协议、来源与验证说明。",
+      "known_boundaries": [
+        "CI 使用空凭据；构建和源码契约不证明真实讯飞或 DeepSeek 在线调用。",
+        "不证明 ASR/TTS、首包延迟、语音质量、内容安全或硬件行为。",
+        "这不是医疗器械、诊断、处方或急救系统，不能把关键词场景检查写成医学准确率或临床安全证据。",
+        "真实服务商凭据彼此独立且会编译进本地固件；Actions Artifact 仅保留 14 天。"
       ]
     },
     {
