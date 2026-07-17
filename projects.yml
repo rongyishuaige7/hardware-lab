@@ -106,6 +106,32 @@
       ]
     },
     {
+      "name": "Adaptive Traffic Signal System",
+      "repo": "https://github.com/rongyishuaige7/adaptive-traffic-signal-system",
+      "default_branch": "main",
+      "head_sha": "2deecbf6f063c3f57ab4ab2bbf05e8edd0e2da4e",
+      "platform": "ESP32-CAM × 4 · ESP32 · YOLOv8 · FastAPI · Vue 3 · WebSocket",
+      "summary": "四路 ESP32-CAM 车流量自适应交通信号教学原型，包含 YOLOv8 跟踪/过线计数、FastAPI、Vue 3、WebSocket、12 路信号灯和四块 OLED。",
+      "build": {
+        "status": "passed",
+        "run_url": "https://github.com/rongyishuaige7/adaptive-traffic-signal-system/actions/runs/29552967595",
+        "head_sha": "2deecbf6f063c3f57ab4ab2bbf05e8edd0e2da4e",
+        "artifact_retention_days": 14
+      },
+      "hardware_retest": {
+        "status": "not_retested",
+        "date": null,
+        "note": "Source-confirmed · Backend tests passed · Frontend build-verified · Four ESP32-CAM direction builds and ESP32 main build-verified · Current five-board and end-to-end hardware re-test not run。"
+      },
+      "media_scope": "当前没有真实实物照片、演示视频、界面截图、EDA 或制造文件；公开 BOM、接线边界图、FastAPI/Vue 源码、双固件和模拟器。",
+      "known_boundaries": [
+        "模拟器与构建证据不证明车辆检测准确率、物理灯态或道路安全。",
+        "HTTP、MJPEG 与 WebSocket 无认证或 TLS，仅限隔离可信局域网教学环境。",
+        "设备 WebSocket 客户数不是设备身份、命令 ACK 或物理灯态反馈。",
+        "不能用于真实道路信号控制；Actions Artifact 仅保留 14 天。"
+      ]
+    },
+    {
       "name": "Raspberry Pi RFID Room-card System",
       "repo": "https://github.com/rongyishuaige7/raspberry-pi-rfid-room-card-system",
       "default_branch": "main",

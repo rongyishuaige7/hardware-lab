@@ -2,7 +2,7 @@
 
 我独立完成的软硬件原型索引。这里优先展示源码、可复现构建、实物/媒体证据和当前真机复测范围，不把“编译通过”写成“硬件已验证”。
 
-> **状态日期：2026-07-17。** 当前收录 5 个公开项目。每个固定 Actions 链接都对应所列默认分支 HEAD；Actions Artifact 仅保留 14 天，不是永久下载。
+> **状态日期：2026-07-17。** 当前收录 6 个公开项目。每个固定 Actions 链接都对应所列默认分支 HEAD；Actions Artifact 仅保留 14 天，不是永久下载。
 
 ## 项目
 
@@ -45,6 +45,16 @@
 - **真机状态：** Source-confirmed · Tag/Gateway build-verified · Server tests passed · Android build-verified · Current end-to-end hardware re-test not run。
 - **公开范围：** 当前没有实物照片、演示视频、App 截图、EDA、PCB 或制造文件；公开 BOM 和接线边界图，接线图不是 PCB 原理图。
 - **边界：** QUERY 不能唤醒深睡标签，定位只确认命令下发到网关；HTTP 与 LoRa 均无认证或加密，仅限隔离可信局域网教学环境。
+
+### [Adaptive Traffic Signal System](https://github.com/rongyishuaige7/adaptive-traffic-signal-system)
+
+四路 ESP32-CAM 车流量自适应交通信号教学原型，包含 YOLOv8 跟踪/过线计数、FastAPI、Vue 3、WebSocket、12 路信号灯和四块 OLED。
+
+- **平台：** ESP32-CAM × 4 · ESP32 · YOLOv8 · FastAPI · Vue 3 · WebSocket
+- **构建证据：** [`2deecbf6f063`](https://github.com/rongyishuaige7/adaptive-traffic-signal-system/commit/2deecbf6f063c3f57ab4ab2bbf05e8edd0e2da4e) · [Actions 成功](https://github.com/rongyishuaige7/adaptive-traffic-signal-system/actions/runs/29552967595)
+- **真机状态：** Source-confirmed · Backend tests passed · Frontend build-verified · N/S/E/W ESP32-CAM and ESP32 main build-verified · Current five-board and end-to-end hardware re-test not run。
+- **公开范围：** FastAPI/Vue 源码、双固件、模拟器、BOM 和接线边界图；当前没有真实实物照片、演示视频、界面截图、EDA 或制造文件。
+- **边界：** 模拟器和构建不证明检测准确率、物理灯态或道路安全；接口无认证/TLS，仅限隔离可信局域网桌面教学模型，不能用于真实道路信号控制。
 
 ### [Raspberry Pi RFID Room-card System](https://github.com/rongyishuaige7/raspberry-pi-rfid-room-card-system)
 
