@@ -286,6 +286,32 @@
         "固件构建不证明传感器读数、OLED、RTC、Wi-Fi、NTP、天气数据、配置保存或长期稳定性。",
         "Flash 构建占用为 79.1%；Actions Artifact 仅保留 14 天。"
       ]
+    },
+    {
+      "name": "基于ESP32-S3的多传感器智能安全监测系统",
+      "repo": "https://github.com/rongyishuaige7/esp32-s3-smart-safety-monitor",
+      "default_branch": "main",
+      "head_sha": "b39f55f1618184df5ae9bb6c7a611d3a6129ab36",
+      "platform": "ESP32-S3 · ESP-IDF · PlatformIO · FreeRTOS · MQ-2 · MQ-5 · SSD1306 · HC-SR04",
+      "summary": "ESP32-S3 多传感器监测教学原型，包含 MQ-2/MQ-5 原始采样、火焰与超声波输入、OLED、本地状态页和低压执行器分时逻辑。",
+      "build": {
+        "status": "passed",
+        "run_url": "https://github.com/rongyishuaige7/esp32-s3-smart-safety-monitor/actions/runs/29577699732",
+        "head_sha": "b39f55f1618184df5ae9bb6c7a611d3a6129ab36",
+        "artifact_retention_days": 14
+      },
+      "hardware_retest": {
+        "status": "not_retested",
+        "date": null,
+        "note": "源码来源、公开净化、无硬件源码契约与 ESP32-S3 固件构建已验证；当前开发板、MQ-2、MQ-5、火焰、HC-SR04、OLED、蜂鸣器、泵、风扇、舵机与本地网络状态页尚未按当前公开 commit 重新真机复测。"
+      },
+      "media_scope": "当前未公开实物照片、演示视频、EDA、PCB、Gerber 或制造文件；已公开 BOM、源码推导接线边界图、来源、协议、状态与验证说明。",
+      "known_boundaries": [
+        "固定热点密码不公开；本地启用 SoftAP/SSE 无认证、无 TLS，仅限隔离可信测试网络。",
+        "构建和源码契约不证明传感器准确、硬件动作或任何安全效果。",
+        "不能用于火灾/燃气报警、自动灭火、通风安全、生命安全或生产控制。",
+        "Flash 构建占用 82.3%，属于后续扩展边界；Actions Artifact 仅保留 14 天。"
+      ]
     }
   ]
 }
