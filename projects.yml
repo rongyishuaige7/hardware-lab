@@ -260,6 +260,32 @@
         "构建和源码契约不证明 PIR、HX711、RGB、蜂鸣器、SPIFFS、Wi-Fi、NTP 或 App 端到端行为。",
         "Actions Artifact 会按 14 天保留策略过期，不是永久下载。"
       ]
+    },
+    {
+      "name": "基于ESP32的天气时钟",
+      "repo": "https://github.com/rongyishuaige7/esp32-weather-clock",
+      "default_branch": "main",
+      "head_sha": "73533ee4ebf3e78b7613afe50b9128df80a00353",
+      "platform": "ESP32 · Arduino · PlatformIO · DHT22 · BH1750 · DS3231 · SSD1306 · Wi-Fi",
+      "summary": "基于 ESP32、DHT22、BH1750、DS3231、SSD1306 OLED 与本地 AP 配网的天气时钟教学原型。",
+      "build": {
+        "status": "passed",
+        "run_url": "https://github.com/rongyishuaige7/esp32-weather-clock/actions/runs/29575555202",
+        "head_sha": "73533ee4ebf3e78b7613afe50b9128df80a00353",
+        "artifact_retention_days": 14
+      },
+      "hardware_retest": {
+        "status": "not_retested",
+        "date": null,
+        "note": "源码来源、公开凭据净化、无硬件源码契约与 ESP32 PlatformIO 构建已验证；当前 ESP32、DHT22、BH1750、DS3231、OLED、Wi-Fi、NTP、EEPROM 与天气 API 端到端链路尚未重新真机复测。"
+      },
+      "media_scope": "当前没有公开实物照片、演示视频、原理图、PCB、Gerber 或制造文件；已公开 BOM、源码推导接线边界图、来源、协议与验证说明。",
+      "known_boundaries": [
+        "AP 配网、/scan 和 /save 是无认证、无 TLS 的本地 HTTP；开放 AP 只限隔离可信环境。",
+        "EEPROM 保存 Wi-Fi 和天气 API 凭据，不是安全存储；天气请求当前使用 setInsecure()，不校验证书。",
+        "固件构建不证明传感器读数、OLED、RTC、Wi-Fi、NTP、天气数据、配置保存或长期稳定性。",
+        "Flash 构建占用为 79.1%；Actions Artifact 仅保留 14 天。"
+      ]
     }
   ]
 }

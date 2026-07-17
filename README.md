@@ -2,7 +2,7 @@
 
 我独立完成的软硬件原型索引。这里优先展示源码、可复现构建、实物/媒体证据和当前真机复测范围，不把“编译通过”写成“硬件已验证”。
 
-> **状态日期：2026-07-17。** 当前收录 10 个公开项目。每个固定 Actions 链接都对应所列默认分支 HEAD；Actions Artifact 仅保留 14 天，不是永久下载。
+> **状态日期：2026-07-17。** 当前收录 11 个公开项目。每个固定 Actions 链接都对应所列默认分支 HEAD；Actions Artifact 仅保留 14 天，不是永久下载。
 
 ## 命名规范
 
@@ -100,6 +100,16 @@
 - **真机状态：** 源码来源、硬件无关源码契约、ESP32 固件与 Flutter 客户端构建已验证；当前 ESP32、OLED、DHT11、PIR、MAX98357A、实体按键及 Flutter App 端到端链路尚未重新真机复测。
 - **公开范围：** 当前没有实物照片、演示视频、EDA、PCB 或制造文件；已公开 BOM、接线边界图、协议、来源与验证说明。原始 WAV 的再分发许可未逐一确认，当前仓库不分发音频素材。
 - **边界：** AP 配网和 STA REST 均使用无认证、无 TLS 的本地 HTTP，只限隔离可信局域网；没有使用者自备的合法 WAV 时，声音功能不会完成。构建不等同于 NTP、传感器、OLED、I²S、按钮、Wi-Fi 或 App 端到端验证。
+
+### [基于ESP32的天气时钟](https://github.com/rongyishuaige7/esp32-weather-clock)
+
+基于 ESP32、DHT22、BH1750、DS3231、SSD1306 OLED 与本地 AP 配网的天气时钟教学原型。
+
+- **平台：** ESP32 · Arduino · PlatformIO · DHT22 · BH1750 · DS3231 · SSD1306 · Wi-Fi
+- **构建证据：** [`73533ee4ebf3`](https://github.com/rongyishuaige7/esp32-weather-clock/commit/73533ee4ebf3e78b7613afe50b9128df80a00353) · [Actions 成功](https://github.com/rongyishuaige7/esp32-weather-clock/actions/runs/29575555202)
+- **真机状态：** 源码来源、公开凭据净化、无硬件源码契约与 ESP32 PlatformIO 构建已验证；当前 ESP32、DHT22、BH1750、DS3231、OLED、Wi-Fi、NTP、EEPROM 与天气 API 端到端链路尚未重新真机复测。
+- **公开范围：** 当前没有公开实物照片、演示视频、原理图、PCB、Gerber 或制造文件；已公开 BOM、源码推导接线边界图、来源、协议与验证说明。
+- **边界：** AP 配网、`/scan` 和 `/save` 是无认证、无 TLS 的本地 HTTP；EEPROM 不是安全存储，天气请求当前使用 `setInsecure()` 而不校验证书。固件构建不证明传感器、OLED、RTC、Wi-Fi、NTP、天气数据或长期稳定性；Flash 占用 79.1%，Actions Artifact 仅保留 14 天。
 
 ### [基于ESP32的智能药盒系统](https://github.com/rongyishuaige7/esp32-smart-pillbox)
 
