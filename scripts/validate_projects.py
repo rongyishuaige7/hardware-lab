@@ -92,6 +92,8 @@ def validate_local(data: dict[str, Any]) -> list[dict[str, Any]]:
             fail(f"project #{index} is missing: {', '.join(sorted(missing))}")
 
         name = require_nonempty_string(project, "name", f"project #{index}")
+        if not re.search(r"[\u4e00-\u9fff]", name):
+            fail(f"{name}: Hardware Lab project names must contain Chinese text")
         repo = require_nonempty_string(project, "repo", name).rstrip("/")
         project["repo"] = repo
         if not REPO_RE.fullmatch(repo):

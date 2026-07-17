@@ -6,7 +6,7 @@
 
 ## 项目
 
-### [ESP32 RPS Game](https://github.com/rongyishuaige7/ESP32_RPS_Game)
+### [ESP32-S3 视觉猜拳游戏](https://github.com/rongyishuaige7/ESP32_RPS_Game)
 
 基于摄像头手势识别的剪刀石头布硬件游戏，包含 OLED、音频、RGB 反馈与可选 MJPEG 推流。
 
@@ -16,7 +16,7 @@
 - **公开范围：** 当前仓库未公开实物照片、演示视频或 EDA/制造文件。
 - **边界：** CI 只证明固定配置下的固件构建和 Artifact 上传；板型、引脚或摄像头配置变化后仍需重新烧录核对。
 
-### [Multimodal Smart Pot](https://github.com/rongyishuaige7/esp32-s3-multimodal-smart-pot)
+### [多模态交互桌面智能花盆](https://github.com/rongyishuaige7/esp32-s3-multimodal-smart-pot)
 
 多模态桌面智能花盆原型，覆盖环境感知、双泵灌溉、本地彩屏、局域网控制、语音与手势交互。
 
@@ -26,7 +26,7 @@
 - **公开范围：** 两张去除 EXIF/GPS 的历史实物照片，以及原理图 PDF、EasyEDA PCB JSON、BOM 和 Gerber/钻孔文件；没有演示视频，App 源码未找回。
 - **边界：** 历史照片不证明当前提交已真机复测；EDA 引脚和 Flash 配置与当前公开固件仍有已披露的版本边界。
 
-### [STM32 Multisensor Data Acquisition](https://github.com/rongyishuaige7/stm32-multisensor-data-acquisition)
+### [STM32 多传感器数据采集系统](https://github.com/rongyishuaige7/stm32-multisensor-data-acquisition)
 
 多传感器数据采集教学原型，包含 Flash 历史与离线缓存、ESP-01S AT 联网、TCP JSON 工具、OLED 与告警。
 
@@ -36,7 +36,7 @@
 - **公开范围：** 当前没有实物照片、演示视频、EDA、PCB 或制造文件；公开 BOM 和接线边界图，接线图不是 PCB 原理图。
 - **边界：** ESP/调试串口是源码级裁决，传感器电气接口仍需实物确认；TCP 无认证和 TLS，只面向可信局域网。
 
-### [LoRa Warehouse Tracking System](https://github.com/rongyishuaige7/lora-warehouse-tracking-system)
+### [LoRa 仓库物品追踪定位系统](https://github.com/rongyishuaige7/lora-warehouse-tracking-system)
 
 仓库区域追踪教学原型，包含 LoRa 标签/网关固件、Flask/SQLite 服务与 Kotlin Android 客户端。
 
@@ -66,7 +66,7 @@
 - **公开范围：** 当前未公开真实实物照片、演示视频、EDA、PCB 或制造文件；已公开 BOM、接线边界图、协议、来源与验证说明。
 - **边界：** CI 使用空凭据，构建和源码契约不证明真实讯飞/DeepSeek 调用、ASR/TTS、首包延迟、语音质量或硬件行为；这不是医疗器械、诊断、处方或急救系统，Actions Artifact 仅保留 14 天。
 
-### [Raspberry Pi RFID Room-card System](https://github.com/rongyishuaige7/raspberry-pi-rfid-room-card-system)
+### [树莓派 RFID 房卡管理系统](https://github.com/rongyishuaige7/raspberry-pi-rfid-room-card-system)
 
 双 RC522 房卡管理教学原型，包含树莓派 Python 服务、MariaDB、Qt/C++ 管理端、服务端角色权限、房态与审计记录。
 

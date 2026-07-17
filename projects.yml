@@ -3,7 +3,7 @@
   "status_date": "2026-07-17",
   "projects": [
     {
-      "name": "ESP32 RPS Game",
+      "name": "ESP32-S3 视觉猜拳游戏",
       "repo": "https://github.com/rongyishuaige7/ESP32_RPS_Game",
       "default_branch": "main",
       "head_sha": "7cc39bd4ace77febee17320fe8a2efd8ac06b205",
@@ -28,7 +28,7 @@
       ]
     },
     {
-      "name": "Multimodal Smart Pot",
+      "name": "多模态交互桌面智能花盆",
       "repo": "https://github.com/rongyishuaige7/esp32-s3-multimodal-smart-pot",
       "default_branch": "main",
       "head_sha": "aacb1c0c3beb4add79a740d838166c63cf95b10c",
@@ -54,7 +54,7 @@
       ]
     },
     {
-      "name": "STM32 Multisensor Data Acquisition",
+      "name": "STM32 多传感器数据采集系统",
       "repo": "https://github.com/rongyishuaige7/stm32-multisensor-data-acquisition",
       "default_branch": "main",
       "head_sha": "850fb32b667f43c4f7ecdb5ebbb014b91b70a96f",
@@ -80,7 +80,7 @@
       ]
     },
     {
-      "name": "LoRa Warehouse Tracking System",
+      "name": "LoRa 仓库物品追踪定位系统",
       "repo": "https://github.com/rongyishuaige7/lora-warehouse-tracking-system",
       "default_branch": "main",
       "head_sha": "81975420ff15182fd412b978c79acdf2279d608e",
@@ -158,7 +158,7 @@
       ]
     },
     {
-      "name": "Raspberry Pi RFID Room-card System",
+      "name": "树莓派 RFID 房卡管理系统",
       "repo": "https://github.com/rongyishuaige7/raspberry-pi-rfid-room-card-system",
       "default_branch": "main",
       "head_sha": "9880b7d9de71cfa75376a3720fde270359ffedbe",
