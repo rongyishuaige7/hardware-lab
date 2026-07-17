@@ -2,7 +2,7 @@
 
 我独立完成的软硬件原型索引。这里优先展示源码、可复现构建、实物/媒体证据和当前真机复测范围，不把“编译通过”写成“硬件已验证”。
 
-> **状态日期：2026-07-17。** 当前收录 13 个公开项目。每个固定 Actions 链接都对应所列默认分支 HEAD；Actions Artifact 仅保留 14 天，不是永久下载。
+> **状态日期：2026-07-17。** 当前收录 14 个公开项目。每个固定 Actions 链接都对应所列默认分支 HEAD；Actions Artifact 仅保留 14 天，不是永久下载。
 
 ## 命名规范
 
@@ -141,6 +141,17 @@ ESP32-S3 多传感器监测教学原型，包含 MQ-2/MQ-5 原始采样、火焰
 - **真机状态：** 源码来源、公开净化、Python/API/隔离 MySQL mock 联调与 Avalonia 构建已验证；当前 Raspberry Pi、DHT22、BH1750、真实 MySQL 部署与 LAN 端到端链路尚未按当前公开提交重新真机复测。
 - **公开范围：** 当前未公开实物照片、演示视频、EDA、PCB、Gerber、制造文件、系统镜像或真实数据库；已公开源码、BOM、接线边界、协议、来源与验证说明。
 - **边界：** `USE_MOCK_SENSORS=1` 只生成随机模拟数据；API `/api/health`、人工 `devices.status` 与最新记录均不代表真实传感器、实时采样或设备在线。HTTP、Bearer JWT 与 MySQL 只适合隔离可信教学网络；本项目不是气象仪器、环境安全或生产控制系统。
+
+
+### [基于ESP32的婴儿状态监测原型](https://github.com/rongyishuaige7/esp32-baby-monitor)
+
+两路距离、温湿度和声音幅度输入驱动 ESP32 中的演示级固定阈值分类、RGB/蜂鸣器本地反馈和可选可信局域网 JSON 接口。
+
+- **平台：** ESP32 · Arduino · PlatformIO · HC-SR04 · DHT11 · 模拟声音输入 · WebServer
+- **构建证据：** [`afeec7ed8c2a`](https://github.com/rongyishuaige7/esp32-baby-monitor/commit/afeec7ed8c2afa46e785e7f887b3fe3fcd9a294d) · [Actions 成功](https://github.com/rongyishuaige7/esp32-baby-monitor/actions/runs/29583836343)
+- **真机状态：** 桌面原工程当前工作区来源、公开净化、硬件无关源码契约与 ESP32 PlatformIO 构建已验证；当前 ESP32、双 HC-SR04、DHT11、声音模块、RGB LED、蜂鸣器、按钮、Wi-Fi 与 HTTP 尚未按当前公开提交重新真机复测。
+- **公开范围：** 当前未公开 Android App、实物照片、演示视频、EDA、PCB、Gerber、制造文件、固件二进制或真实网络/儿童相关材料；已公开固件、BOM、源码推导接线边界、协议、来源、状态与验证说明。
+- **边界：** 两路距离组合不是人体、婴儿、姿态、睡姿或趴睡识别；声音幅度不是哭声识别。`reference`、`attention`、`high_threshold` 和 `unknown` 只是本地演示级分类；LED、蜂鸣器、HTTP、CI 和 Artifact 不代表安全、医疗、告警送达、有人看护或设备在线。HC-SR04 ECHO 常见为 5 V，必须经正确分压/电平转换后才可接 ESP32；HTTP 无 TLS/认证，只能用于隔离可信教学局域网。本项目不得用于婴儿看护、医疗、睡眠安全、紧急响应或生命安全场景；Actions Artifact 仅保留 14 天。
 
 ## 状态口径
 
