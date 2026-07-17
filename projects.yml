@@ -312,6 +312,33 @@
         "不能用于火灾/燃气报警、自动灭火、通风安全、生命安全或生产控制。",
         "Flash 构建占用 82.3%，属于后续扩展边界；Actions Artifact 仅保留 14 天。"
       ]
+    },
+    {
+      "name": "基于树莓派的多传感器小型气象站",
+      "repo": "https://github.com/rongyishuaige7/raspberry-pi-weather-station",
+      "default_branch": "main",
+      "head_sha": "8eecf90294ac53c9915ec6b430a80b519917a34c",
+      "platform": "Raspberry Pi · Python · Flask · MySQL · C# · Avalonia · DHT22 · BH1750",
+      "summary": "树莓派采集 DHT22 温湿度与 BH1750 光照，写入 MySQL，经 Flask REST API 供 Avalonia / C# 上位机查看、查询历史和维护阈值的教学原型。",
+      "build": {
+        "status": "passed",
+        "run_url": "https://github.com/rongyishuaige7/raspberry-pi-weather-station/actions/runs/29580328463",
+        "head_sha": "8eecf90294ac53c9915ec6b430a80b519917a34c",
+        "artifact_retention_days": 14
+      },
+      "hardware_retest": {
+        "status": "not_retested",
+        "date": null,
+        "note": "源码来源、公开净化、Python/API/隔离 MySQL mock 联调与 Avalonia 构建已验证；当前 Raspberry Pi、DHT22、BH1750、真实 MySQL 部署与 LAN 端到端链路尚未按当前公开提交重新真机复测。"
+      },
+      "media_scope": "当前未公开实物照片、演示视频、EDA、PCB、Gerber、制造文件、系统镜像或真实数据库；已公开源码、BOM、接线边界、协议、来源与验证说明。",
+      "known_boundaries": [
+        "CI 的 USE_MOCK_SENSORS=1 只生成随机模拟数据，不代表真实传感器、当前天气、设备在线或环境状态。",
+        "API /api/health 只说明 API 进程响应；devices.status 是人工维护字段；查询到最新记录不代表实时采样或采集器运行。",
+        "HTTP、Bearer JWT 与 MySQL 只适合隔离可信教学网络；没有 TLS、设备身份、细粒度权限、速率限制或生产级密钥管理。",
+        "本项目不是气象仪器、环境安全、消防/报警、医疗、生产控制或远程运维系统；构建与 mock 联调不能作为测量准确性、告警送达或安全效果证据。",
+        "Actions Artifact 会按 14 天保留策略过期，不是永久下载。"
+      ]
     }
   ]
 }

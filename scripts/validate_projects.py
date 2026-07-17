@@ -6,7 +6,10 @@ from __future__ import annotations
 import json
 import os
 import re
+import shutil
+import subprocess
 import sys
+import time
 import urllib.error
 import urllib.request
 from pathlib import Path
@@ -16,7 +19,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 PROJECTS_FILE = ROOT / "projects.yml"
 README_FILE = ROOT / "README.md"
-EXPECTED_PROJECT_COUNT = 12
+EXPECTED_PROJECT_COUNT = 13
 SHA_RE = re.compile(r"^[0-9a-f]{40}$")
 REPO_RE = re.compile(r"^https://github\.com/([^/]+)/([^/]+)$")
 RUN_RE = re.compile(
@@ -42,7 +45,27 @@ def fail(message: str) -> None:
 
 
 def get_json(url: str) -> dict[str, Any]:
+    """Read GitHub facts without copying the local GitHub CLI credential into env."""
     token = os.environ.get("GITHUB_TOKEN")
+    if not token and shutil.which("gh"):
+        path = url.removeprefix("https://api.github.com/")
+        last_detail = ""
+        for attempt in range(1, 4):
+            try:
+                completed = subprocess.run(
+                    ["gh", "api", path],
+                    check=True,
+                    capture_output=True,
+                    text=True,
+                    timeout=45,
+                )
+                return json.loads(completed.stdout)
+            except (subprocess.CalledProcessError, subprocess.TimeoutExpired, json.JSONDecodeError) as error:
+                last_detail = getattr(error, "stderr", "").strip() or str(error)
+                if attempt < 3:
+                    time.sleep(attempt)
+        fail(f"gh api {path} failed after 3 attempts: {last_detail}")
+
     headers = {
         "Accept": "application/vnd.github+json",
         "User-Agent": "rongyi-hardware-lab-validator",

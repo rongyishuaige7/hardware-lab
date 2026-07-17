@@ -2,7 +2,7 @@
 
 我独立完成的软硬件原型索引。这里优先展示源码、可复现构建、实物/媒体证据和当前真机复测范围，不把“编译通过”写成“硬件已验证”。
 
-> **状态日期：2026-07-17。** 当前收录 12 个公开项目。每个固定 Actions 链接都对应所列默认分支 HEAD；Actions Artifact 仅保留 14 天，不是永久下载。
+> **状态日期：2026-07-17。** 当前收录 13 个公开项目。每个固定 Actions 链接都对应所列默认分支 HEAD；Actions Artifact 仅保留 14 天，不是永久下载。
 
 ## 命名规范
 
@@ -130,6 +130,17 @@ ESP32-S3 多传感器监测教学原型，包含 MQ-2/MQ-5 原始采样、火焰
 - **真机状态：** 源码来源、公开净化、无硬件源码契约与 ESP32-S3 固件构建已验证；当前开发板、MQ-2、MQ-5、火焰、HC-SR04、OLED、蜂鸣器、泵、风扇、舵机与本地网络状态页尚未按当前公开提交重新真机复测。
 - **公开范围：** 当前未公开实物照片、演示视频、EDA、PCB、Gerber 或制造文件；已公开 BOM、源码推导接线边界图、来源、协议、状态与验证说明。
 - **边界：** 固定热点密码不公开；启用后的 SoftAP/SSE 无认证、无 TLS，只限隔离可信测试网络。构建不证明传感器准确、硬件动作或安全效果，不能用于火灾/燃气报警、自动灭火、通风安全、生命安全或生产控制；Flash 占用 82.3%，Actions Artifact 仅保留 14 天。
+
+
+### [基于树莓派的多传感器小型气象站](https://github.com/rongyishuaige7/raspberry-pi-weather-station)
+
+树莓派采集 DHT22 温湿度与 BH1750 光照，写入 MySQL，经 Flask REST API 供 Avalonia / C# 上位机查看、查询历史和维护阈值的教学原型。
+
+- **平台：** Raspberry Pi · Python · Flask · MySQL · C# · Avalonia · DHT22 · BH1750
+- **构建证据：** [`8eecf90294ac`](https://github.com/rongyishuaige7/raspberry-pi-weather-station/commit/8eecf90294ac53c9915ec6b430a80b519917a34c) · [Actions 成功](https://github.com/rongyishuaige7/raspberry-pi-weather-station/actions/runs/29580328463)
+- **真机状态：** 源码来源、公开净化、Python/API/隔离 MySQL mock 联调与 Avalonia 构建已验证；当前 Raspberry Pi、DHT22、BH1750、真实 MySQL 部署与 LAN 端到端链路尚未按当前公开提交重新真机复测。
+- **公开范围：** 当前未公开实物照片、演示视频、EDA、PCB、Gerber、制造文件、系统镜像或真实数据库；已公开源码、BOM、接线边界、协议、来源与验证说明。
+- **边界：** `USE_MOCK_SENSORS=1` 只生成随机模拟数据；API `/api/health`、人工 `devices.status` 与最新记录均不代表真实传感器、实时采样或设备在线。HTTP、Bearer JWT 与 MySQL 只适合隔离可信教学网络；本项目不是气象仪器、环境安全或生产控制系统。
 
 ## 状态口径
 
