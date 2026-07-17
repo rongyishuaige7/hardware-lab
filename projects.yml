@@ -425,13 +425,13 @@
       "name": "基于ESP32的智能化妆品收纳与环境管理系统",
       "repo": "https://github.com/rongyishuaige7/esp32-smart-makeup-cabinet",
       "default_branch": "main",
-      "head_sha": "4746c090eb2fc358aa61e02df2c7f55effba40f3",
+      "head_sha": "4efddb038fd52e674f57000efa0a6a2306dd513b",
       "platform": "ESP32 · Arduino · PlatformIO · Flutter · DHT11 · GUVA-S12SD · PIR · RC522 · SSD1306 · WS2812B · 可选本地 HTTP",
       "summary": "基于 ESP32、DHT11、GUVA-S12SD、PIR、RC522 与 Flutter 的智能化妆品收纳与环境管理教学原型；公开默认不提供 Wi-Fi/HTTP 或实体输出。",
       "build": {
         "status": "passed",
-        "run_url": "https://github.com/rongyishuaige7/esp32-smart-makeup-cabinet/actions/runs/29608194135",
-        "head_sha": "4746c090eb2fc358aa61e02df2c7f55effba40f3",
+        "run_url": "https://github.com/rongyishuaige7/esp32-smart-makeup-cabinet/actions/runs/29610463430",
+        "head_sha": "4efddb038fd52e674f57000efa0a6a2306dd513b",
         "artifact_retention_days": null
       },
       "hardware_retest": {
