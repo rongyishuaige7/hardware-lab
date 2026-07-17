@@ -4,9 +4,13 @@
 
 > **状态日期：2026-07-17。** 当前收录 10 个公开项目。每个固定 Actions 链接都对应所列默认分支 HEAD；Actions Artifact 仅保留 14 天，不是永久下载。
 
+## 命名规范
+
+索引名称统一采用毕业设计常见的表述：**“基于{核心平台/技术}的{功能对象}”**。其中“系统”“终端”“游戏”“花盆”等后缀按原型实际形态保留；名称只说明技术范围与功能主题，不扩大真机、性能或安全结论。仓库 URL、构建证据、真机状态和公开边界均保持不变。
+
 ## 项目
 
-### [ESP32-S3 视觉猜拳游戏](https://github.com/rongyishuaige7/ESP32_RPS_Game)
+### [基于ESP32-S3的视觉猜拳游戏](https://github.com/rongyishuaige7/ESP32_RPS_Game)
 
 基于摄像头手势识别的剪刀石头布硬件游戏，包含 OLED、音频、RGB 反馈与可选 MJPEG 推流。
 
@@ -16,7 +20,7 @@
 - **公开范围：** 当前仓库未公开实物照片、演示视频或 EDA/制造文件。
 - **边界：** CI 只证明固定配置下的固件构建和 Artifact 上传；板型、引脚或摄像头配置变化后仍需重新烧录核对。
 
-### [多模态交互桌面智能花盆](https://github.com/rongyishuaige7/esp32-s3-multimodal-smart-pot)
+### [基于ESP32-S3的多模态交互桌面智能花盆](https://github.com/rongyishuaige7/esp32-s3-multimodal-smart-pot)
 
 多模态桌面智能花盆原型，覆盖环境感知、双泵灌溉、本地彩屏、局域网控制、语音与手势交互。
 
@@ -26,7 +30,7 @@
 - **公开范围：** 两张去除 EXIF/GPS 的历史实物照片，以及原理图 PDF、EasyEDA PCB JSON、BOM 和 Gerber/钻孔文件；没有演示视频，App 源码未找回。
 - **边界：** 历史照片不证明当前提交已真机复测；EDA 引脚和 Flash 配置与当前公开固件仍有已披露的版本边界。
 
-### [STM32 多传感器数据采集系统](https://github.com/rongyishuaige7/stm32-multisensor-data-acquisition)
+### [基于STM32的多传感器数据采集系统](https://github.com/rongyishuaige7/stm32-multisensor-data-acquisition)
 
 多传感器数据采集教学原型，包含 Flash 历史与离线缓存、ESP-01S AT 联网、TCP JSON 工具、OLED 与告警。
 
@@ -36,7 +40,7 @@
 - **公开范围：** 当前没有实物照片、演示视频、EDA、PCB 或制造文件；公开 BOM 和接线边界图，接线图不是 PCB 原理图。
 - **边界：** ESP/调试串口是源码级裁决，传感器电气接口仍需实物确认；TCP 无认证和 TLS，只面向可信局域网。
 
-### [LoRa 仓库物品追踪定位系统](https://github.com/rongyishuaige7/lora-warehouse-tracking-system)
+### [基于LoRa和ESP32的仓库物品追踪定位系统](https://github.com/rongyishuaige7/lora-warehouse-tracking-system)
 
 仓库区域追踪教学原型，包含 LoRa 标签/网关固件、Flask/SQLite 服务与 Kotlin Android 客户端。
 
@@ -46,7 +50,7 @@
 - **公开范围：** 当前没有实物照片、演示视频、App 截图、EDA、PCB 或制造文件；公开 BOM 和接线边界图，接线图不是 PCB 原理图。
 - **边界：** QUERY 不能唤醒深睡标签，定位只确认命令下发到网关；HTTP 与 LoRa 均无认证或加密，仅限隔离可信局域网教学环境。
 
-### [车流量自适应交通信号控制系统](https://github.com/rongyishuaige7/adaptive-traffic-signal-system)
+### [基于多路ESP32-CAM的车流量自适应交通信号控制系统](https://github.com/rongyishuaige7/adaptive-traffic-signal-system)
 
 四路 ESP32-CAM 车流量自适应交通信号教学原型，包含 YOLOv8 跟踪/过线计数、FastAPI、Vue 3、WebSocket、12 路信号灯和四块 OLED。
 
@@ -56,7 +60,7 @@
 - **公开范围：** FastAPI/Vue 源码、双固件、模拟器、BOM 和接线边界图；当前没有真实实物照片、演示视频、界面截图、EDA 或制造文件。
 - **边界：** 模拟器和构建不证明检测准确率、物理灯态或道路安全；接口无认证/TLS，仅限隔离可信局域网桌面教学模型，不能用于真实道路信号控制。
 
-### [ESP32-S3 健康科普语音终端](https://github.com/rongyishuaige7/esp32-s3-health-voice-terminal)
+### [基于ESP32-S3的健康科普语音交互终端](https://github.com/rongyishuaige7/esp32-s3-health-voice-terminal)
 
 基于本地唤醒、讯飞流式 ASR/TTS、DeepSeek SSE、双 I²S 音频和 LVGL 显示的健康科普语音终端教学原型。
 
@@ -66,7 +70,7 @@
 - **公开范围：** 当前未公开真实实物照片、演示视频、EDA、PCB 或制造文件；已公开 BOM、接线边界图、协议、来源与验证说明。
 - **边界：** CI 使用空凭据，构建和源码契约不证明真实讯飞/DeepSeek 调用、ASR/TTS、首包延迟、语音质量或硬件行为；这不是医疗器械、诊断、处方或急救系统，Actions Artifact 仅保留 14 天。
 
-### [树莓派 RFID 房卡管理系统](https://github.com/rongyishuaige7/raspberry-pi-rfid-room-card-system)
+### [基于树莓派和RFID的房卡管理系统](https://github.com/rongyishuaige7/raspberry-pi-rfid-room-card-system)
 
 双 RC522 房卡管理教学原型，包含树莓派 Python 服务、MariaDB、Qt/C++ 管理端、服务端角色权限、房态与审计记录。
 
@@ -76,7 +80,7 @@
 - **公开范围：** 四张去元数据并遮盖私网 IP/UID 的历史界面截图、BOM、接线边界图、服务端、Qt 客户端和数据库 schema；当前没有实物照片、演示视频、EDA 或制造文件。
 - **边界：** 自定义 TCP 无 TLS，RC522 UID 可复制，SG90 无位置反馈；仅限隔离可信局域网教学原型，不是生产门禁系统。
 
-### [STM32 触摸与隔空手势控制系统](https://github.com/rongyishuaige7/stm32-touch-gesture-control-system)
+### [基于STM32的触摸与隔空手势控制系统](https://github.com/rongyishuaige7/stm32-touch-gesture-control-system)
 
 使用四路电容触摸和 APDS-9960 隔空手势控制四路 LED，并通过 ESP-01S 本地热点展示状态与诊断的教学原型。
 
@@ -87,7 +91,7 @@
 - **边界：** 构建和源码契约不证明触摸可靠性、APDS 识别率、ESP AT 兼容性或实际 LED 行为；HTTP 无认证和 TLS，仅限隔离可信的教学热点，GPIO 不得直接驱动大电流或市电负载。
 
 
-### [ESP32 智能闹钟](https://github.com/rongyishuaige7/esp32-smart-alarm-clock)
+### [基于ESP32的智能闹钟系统](https://github.com/rongyishuaige7/esp32-smart-alarm-clock)
 
 基于 ESP32、OLED、DHT11、PIR、MAX98357A 与 Flutter 局域网客户端的智能闹钟教学原型。
 
@@ -97,7 +101,7 @@
 - **公开范围：** 当前没有实物照片、演示视频、EDA、PCB 或制造文件；已公开 BOM、接线边界图、协议、来源与验证说明。原始 WAV 的再分发许可未逐一确认，当前仓库不分发音频素材。
 - **边界：** AP 配网和 STA REST 均使用无认证、无 TLS 的本地 HTTP，只限隔离可信局域网；没有使用者自备的合法 WAV 时，声音功能不会完成。构建不等同于 NTP、传感器、OLED、I²S、按钮、Wi-Fi 或 App 端到端验证。
 
-### [ESP32 智能药盒](https://github.com/rongyishuaige7/esp32-smart-pillbox)
+### [基于ESP32的智能药盒系统](https://github.com/rongyishuaige7/esp32-smart-pillbox)
 
 基于 ESP32、双 PIR、双 HX711、RGB/蜂鸣器与 Flutter 局域网客户端的智能药盒教学原型。
 
