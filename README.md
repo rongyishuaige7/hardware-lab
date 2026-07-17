@@ -2,7 +2,7 @@
 
 我独立完成的软硬件原型索引。这里优先展示源码、可复现构建、实物/媒体证据和当前真机复测范围，不把“编译通过”写成“硬件已验证”。
 
-> **状态日期：2026-07-17。** 当前收录 8 个公开项目。每个固定 Actions 链接都对应所列默认分支 HEAD；Actions Artifact 仅保留 14 天，不是永久下载。
+> **状态日期：2026-07-17。** 当前收录 9 个公开项目。每个固定 Actions 链接都对应所列默认分支 HEAD；Actions Artifact 仅保留 14 天，不是永久下载。
 
 ## 项目
 
@@ -85,6 +85,17 @@
 - **真机状态：** 源码来源、硬件无关源码契约与 PlatformIO 干净构建已验证；当前 STM32、TTP223、APDS-9960、ESP-01S 与 LED 整机尚未重新真机复测。
 - **公开范围：** 当前没有实物照片、演示视频、EDA、PCB 或制造文件；已公开 BOM、接线边界图、协议、来源与验证说明。
 - **边界：** 构建和源码契约不证明触摸可靠性、APDS 识别率、ESP AT 兼容性或实际 LED 行为；HTTP 无认证和 TLS，仅限隔离可信的教学热点，GPIO 不得直接驱动大电流或市电负载。
+
+
+### [ESP32 智能闹钟](https://github.com/rongyishuaige7/esp32-smart-alarm-clock)
+
+基于 ESP32、OLED、DHT11、PIR、MAX98357A 与 Flutter 局域网客户端的智能闹钟教学原型。
+
+- **平台：** ESP32 · Arduino · PlatformIO · Flutter · OLED · DHT11 · PIR · MAX98357A
+- **构建证据：** [`7aeb1a23b6a2`](https://github.com/rongyishuaige7/esp32-smart-alarm-clock/commit/7aeb1a23b6a28f8d5efe5da63c3561bf003da676) · [Actions 成功](https://github.com/rongyishuaige7/esp32-smart-alarm-clock/actions/runs/29569475061)
+- **真机状态：** 源码来源、硬件无关源码契约、ESP32 固件与 Flutter 客户端构建已验证；当前 ESP32、OLED、DHT11、PIR、MAX98357A、实体按键及 Flutter App 端到端链路尚未重新真机复测。
+- **公开范围：** 当前没有实物照片、演示视频、EDA、PCB 或制造文件；已公开 BOM、接线边界图、协议、来源与验证说明。原始 WAV 的再分发许可未逐一确认，当前仓库不分发音频素材。
+- **边界：** AP 配网和 STA REST 均使用无认证、无 TLS 的本地 HTTP，只限隔离可信局域网；没有使用者自备的合法 WAV 时，声音功能不会完成。构建不等同于 NTP、传感器、OLED、I²S、按钮、Wi-Fi 或 App 端到端验证。
 
 ## 状态口径
 
