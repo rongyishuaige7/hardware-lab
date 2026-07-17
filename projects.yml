@@ -420,6 +420,32 @@
         "本项目不适用于市电、继电器、公共/应急照明、安防、消防、医疗、生产控制或无人值守场景。",
         "Actions Artifact 会按 14 天保留策略过期，不是永久下载。"
       ]
+    },
+    {
+      "name": "基于ESP32的智能化妆品收纳与环境管理系统",
+      "repo": "https://github.com/rongyishuaige7/esp32-smart-makeup-cabinet",
+      "default_branch": "main",
+      "head_sha": "4746c090eb2fc358aa61e02df2c7f55effba40f3",
+      "platform": "ESP32 · Arduino · PlatformIO · Flutter · DHT11 · GUVA-S12SD · PIR · RC522 · SSD1306 · WS2812B · 可选本地 HTTP",
+      "summary": "基于 ESP32、DHT11、GUVA-S12SD、PIR、RC522 与 Flutter 的智能化妆品收纳与环境管理教学原型；公开默认不提供 Wi-Fi/HTTP 或实体输出。",
+      "build": {
+        "status": "passed",
+        "run_url": "https://github.com/rongyishuaige7/esp32-smart-makeup-cabinet/actions/runs/29608194135",
+        "head_sha": "4746c090eb2fc358aa61e02df2c7f55effba40f3",
+        "artifact_retention_days": null
+      },
+      "hardware_retest": {
+        "status": "not_retested",
+        "date": null,
+        "note": "公开范围扫描、仓库资产、源码契约、ESP32 默认/双 opt-in/仅执行器宏编译覆盖，以及 Flutter 客户端构建已由 exact-HEAD CI 验证；当前 ESP32、DHT11、GUVA-S12SD、PIR、RC522、OLED、低压执行器、Wi-Fi、HTTP 与 Flutter 端到端链路尚未按当前公开提交重新真机复测。"
+      },
+      "media_scope": "当前未公开实物照片、演示视频、原理图、PCB、Gerber 或制造文件；已公开固件、Flutter 客户端、BOM、源码推导接线边界图、协议、来源与验证说明。",
+      "known_boundaries": [
+        "默认公开源码不提供 Wi-Fi 凭据，不启动 Wi-Fi/HTTP；物理输出仅在本机两个实验开关均精确设为 1 时才进入对应路径，不能据此推断真实负载关闭或电气安全。",
+        "RFID UID 可复制且不是认证凭据；公开 HTTP 不回显 UID，刷卡不会自动命令插销。",
+        "CI 不上传构建产物。固定 Actions run 只证明公开范围扫描、仓库检查、源码契约和固定构建；不证明真机、网络、传感器、实体执行器、机械位置或电气安全。",
+        "本项目不是化妆品/皮肤/UV/健康判断、门禁/电子锁/防盗/认证、远程控制、安全或生产系统。"
+      ]
     }
   ]
 }

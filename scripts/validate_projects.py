@@ -19,7 +19,8 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 PROJECTS_FILE = ROOT / "projects.yml"
 README_FILE = ROOT / "README.md"
-EXPECTED_PROJECT_COUNT = 16
+EXPECTED_PROJECT_COUNT = 17
+NO_ARTIFACT_BOUNDARY = "CI 不上传构建产物"
 SHA_RE = re.compile(r"^[0-9a-f]{40}$")
 REPO_RE = re.compile(r"^https://github\.com/([^/]+)/([^/]+)$")
 RUN_RE = re.compile(
@@ -143,8 +144,14 @@ def validate_local(data: dict[str, Any]) -> list[dict[str, Any]]:
             fail(f"{name}: build evidence must match the indexed default-branch HEAD")
         if not RUN_RE.fullmatch(str(build.get("run_url", ""))):
             fail(f"{name}: build.run_url must be a fixed GitHub Actions run URL")
-        if build.get("artifact_retention_days") != 14:
-            fail(f"{name}: artifact retention must stay explicit at 14 days")
+        if "artifact_retention_days" not in build:
+            fail(f"{name}: artifact_retention_days must explicitly be 14 or null")
+        artifact_retention_days = build["artifact_retention_days"]
+        if artifact_retention_days is not None and (
+            type(artifact_retention_days) is not int
+            or artifact_retention_days != 14
+        ):
+            fail(f"{name}: artifact_retention_days must be integer 14 or null")
 
         retest = project.get("hardware_retest")
         if not isinstance(retest, dict) or retest.get("status") not in ALLOWED_RETEST:
@@ -162,6 +169,13 @@ def validate_local(data: dict[str, Any]) -> list[dict[str, Any]]:
             fail(f"{name}: known_boundaries must be a non-empty array")
         if not all(isinstance(item, str) and item.strip() for item in boundaries):
             fail(f"{name}: known_boundaries entries must be non-empty strings")
+        if artifact_retention_days is None and not any(
+            NO_ARTIFACT_BOUNDARY in item for item in boundaries
+        ):
+            fail(
+                f"{name}: artifact_retention_days=null requires an explicit "
+                f"'{NO_ARTIFACT_BOUNDARY}' boundary"
+            )
 
     return projects
 
@@ -196,6 +210,13 @@ def validate_live(projects: list[dict[str, Any]]) -> None:
             fail(f"{name}: workflow run is not a completed success")
         if run.get("head_sha") != project["head_sha"]:
             fail(f"{name}: workflow run does not match the indexed HEAD")
+        if project["build"]["artifact_retention_days"] is None:
+            artifacts = get_json(f"{api_base}/actions/runs/{run_id}/artifacts")
+            if artifacts.get("total_count") != 0:
+                fail(
+                    f"{name}: artifact_retention_days=null requires the "
+                    "indexed exact Actions run to upload no artifacts"
+                )
         print(f"PASS {name}: {project['head_sha'][:12]} · Actions {run_id}")
 
 
