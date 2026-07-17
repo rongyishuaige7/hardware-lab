@@ -317,13 +317,13 @@
       "name": "基于树莓派的多传感器小型气象站",
       "repo": "https://github.com/rongyishuaige7/raspberry-pi-weather-station",
       "default_branch": "main",
-      "head_sha": "8eecf90294ac53c9915ec6b430a80b519917a34c",
+      "head_sha": "3e005d25865041f2c521c17d5530b4b854a05d16",
       "platform": "Raspberry Pi · Python · Flask · MySQL · C# · Avalonia · DHT22 · BH1750",
       "summary": "树莓派采集 DHT22 温湿度与 BH1750 光照，写入 MySQL，经 Flask REST API 供 Avalonia / C# 上位机查看、查询历史和维护阈值的教学原型。",
       "build": {
         "status": "passed",
-        "run_url": "https://github.com/rongyishuaige7/raspberry-pi-weather-station/actions/runs/29580328463",
-        "head_sha": "8eecf90294ac53c9915ec6b430a80b519917a34c",
+        "run_url": "https://github.com/rongyishuaige7/raspberry-pi-weather-station/actions/runs/29581113359",
+        "head_sha": "3e005d25865041f2c521c17d5530b4b854a05d16",
         "artifact_retention_days": 14
       },
       "hardware_retest": {
