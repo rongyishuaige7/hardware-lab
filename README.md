@@ -2,7 +2,7 @@
 
 我独立完成的软硬件原型索引。这里优先展示源码、可复现构建、实物/媒体证据和当前真机复测范围，不把“编译通过”写成“硬件已验证”。
 
-> **状态日期：2026-07-17。** 当前收录 14 个公开项目。每个固定 Actions 链接都对应所列默认分支 HEAD；Actions Artifact 仅保留 14 天，不是永久下载。
+> **状态日期：2026-07-17。** 当前收录 15 个公开项目。每个固定 Actions 链接都对应所列默认分支 HEAD；Actions Artifact 仅保留 14 天，不是永久下载。
 
 ## 命名规范
 
@@ -152,6 +152,17 @@ ESP32-S3 多传感器监测教学原型，包含 MQ-2/MQ-5 原始采样、火焰
 - **真机状态：** 桌面原工程当前工作区来源、公开净化、硬件无关源码契约与 ESP32 PlatformIO 构建已验证；当前 ESP32、双 HC-SR04、DHT11、声音模块、RGB LED、蜂鸣器、按钮、Wi-Fi 与 HTTP 尚未按当前公开提交重新真机复测。
 - **公开范围：** 当前未公开 Android App、实物照片、演示视频、EDA、PCB、Gerber、制造文件、固件二进制或真实网络/儿童相关材料；已公开固件、BOM、源码推导接线边界、协议、来源、状态与验证说明。
 - **边界：** 两路距离组合不是人体、婴儿、姿态、睡姿或趴睡识别；声音幅度不是哭声识别。`reference`、`attention`、`high_threshold` 和 `unknown` 只是本地演示级分类；LED、蜂鸣器、HTTP、CI 和 Artifact 不代表安全、医疗、告警送达、有人看护或设备在线。HC-SR04 ECHO 常见为 5 V，必须经正确分压/电平转换后才可接 ESP32；HTTP 无 TLS/认证，只能用于隔离可信教学局域网。本项目不得用于婴儿看护、医疗、睡眠安全、紧急响应或生命安全场景；Actions Artifact 仅保留 14 天。
+
+
+### [基于ESP32的蜂箱多传感器数据采集与局域网展示原型](https://github.com/rongyishuaige7/esp32-beehive-monitor)
+
+ESP32 读取 DHT11、BH1750、BMP280、模拟声音幅度和 MQ-2 原始 ADC；使用者本地配置后，Flutter 客户端可在可信局域网请求一条本地 JSON 响应。
+
+- **平台：** ESP32 · Arduino · PlatformIO · Flutter · DHT11 · BH1750 · BMP280 · 模拟 ADC · 本地 HTTP
+- **构建证据：** [`c2aaa3622592`](https://github.com/rongyishuaige7/esp32-beehive-monitor/commit/c2aaa3622592618b52bcb22b8e60913a382c74b4) · [Actions 成功](https://github.com/rongyishuaige7/esp32-beehive-monitor/actions/runs/29594726823)
+- **真机状态：** 源码来源、公开净化、硬件无关源码契约、ESP32 固件与 Flutter 客户端构建已经由 exact-HEAD CI 验证；当前 ESP32、DHT11、BH1750、BMP280、声音输入、MQ-2、LED、Wi-Fi、HTTP 与 Flutter 端到端链路尚未按当前公开提交重新真机复测。
+- **公开范围：** 当前没有公开实物照片、演示视频、原理图、PCB、Gerber 或制造文件；已公开 BOM、源码推导接线边界图、协议、来源、状态与验证说明。
+- **边界：** MQ-2 原始 ADC 不代表烟雾、燃气、火灾或安全检测；声音幅度不代表蜂群健康或行为诊断；气压趋势不是天气预报。HTTP 无认证和 TLS，仅限隔离可信局域网教学环境；CI、Artifact 和构建不代表设备在线、传感器准确、蜂群状态、蜂箱安全、告警送达或有人处理。本项目不是养蜂生产、动物健康、气象预报、烟雾/燃气/火灾报警、环境安全、应急响应或无人值守系统；Actions Artifact 仅保留 14 天。
 
 ## 状态口径
 
