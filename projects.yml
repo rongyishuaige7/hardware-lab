@@ -104,6 +104,32 @@
         "API、网关控制 HTTP 和 LoRa 均无认证或加密，只面向隔离可信局域网教学环境。",
         "电池采样未实现，DHT 失败与不可用数据使用 null/N/A；Actions Artifact 仅保留 14 天。"
       ]
+    },
+    {
+      "name": "Raspberry Pi RFID Room-card System",
+      "repo": "https://github.com/rongyishuaige7/raspberry-pi-rfid-room-card-system",
+      "default_branch": "main",
+      "head_sha": "9880b7d9de71cfa75376a3720fde270359ffedbe",
+      "platform": "Raspberry Pi · Python · Qt/C++ · MariaDB · RC522 · SG90",
+      "summary": "双 RC522 房卡管理教学原型，包含树莓派 Python 服务、MariaDB、Qt/C++ 管理端、服务端角色权限、房态与审计记录。",
+      "build": {
+        "status": "passed",
+        "run_url": "https://github.com/rongyishuaige7/raspberry-pi-rfid-room-card-system/actions/runs/29551405935",
+        "head_sha": "9880b7d9de71cfa75376a3720fde270359ffedbe",
+        "artifact_retention_days": 14
+      },
+      "hardware_retest": {
+        "status": "historical_evidence_only",
+        "date": "2026-04-03",
+        "note": "Source-confirmed · Python tests passed · Qt 5/6 client build-verified · Historical UI demonstrated on 2026-04-03 · Current Raspberry Pi and end-to-end hardware re-test not run。"
+      },
+      "media_scope": "公开四张去元数据并遮盖私网 IP/UID 的历史界面截图、BOM、接线边界图、Python 服务端、Qt 客户端和数据库 schema；当前没有实物照片、演示视频、EDA 或制造文件。",
+      "known_boundaries": [
+        "历史界面截图不绑定当前公开提交，也不证明当前硬件已复测。",
+        "自定义 TCP 无 TLS 或重放保护，RC522 UID 可复制，只面向隔离可信局域网教学环境。",
+        "SG90 没有位置或门锁状态反馈，202 响应只表示 PWM 任务已下发。",
+        "当前 Raspberry Pi 型号、两块 RC522、舵机供电及可选 OLED 等仍需按实物确认；Actions Artifact 仅保留 14 天。"
+      ]
     }
   ]
 }

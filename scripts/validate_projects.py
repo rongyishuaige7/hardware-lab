@@ -16,6 +16,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 PROJECTS_FILE = ROOT / "projects.yml"
 README_FILE = ROOT / "README.md"
+EXPECTED_PROJECT_COUNT = 5
 SHA_RE = re.compile(r"^[0-9a-f]{40}$")
 REPO_RE = re.compile(r"^https://github\.com/([^/]+)/([^/]+)$")
 RUN_RE = re.compile(
@@ -76,6 +77,11 @@ def validate_local(data: dict[str, Any]) -> list[dict[str, Any]]:
     projects = data.get("projects")
     if not isinstance(projects, list) or not projects:
         fail("projects must be a non-empty array")
+    if len(projects) != EXPECTED_PROJECT_COUNT:
+        fail(
+            f"projects must contain the {EXPECTED_PROJECT_COUNT} currently "
+            "published Hardware Lab entries"
+        )
 
     repos: set[str] = set()
     for index, project in enumerate(projects, start=1):
@@ -172,6 +178,8 @@ def validate_readme(projects: list[dict[str, Any]]) -> None:
     readme = README_FILE.read_text(encoding="utf-8")
     if "SYSTEM ONLINE" in readme.upper():
         fail("README must not claim SYSTEM ONLINE")
+    if f"当前收录 {len(projects)} 个公开项目" not in readme:
+        fail("README project count is not synchronized with projects.yml")
     for project in projects:
         for value in (
             project["repo"],
