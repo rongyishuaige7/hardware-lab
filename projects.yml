@@ -577,6 +577,32 @@
         "构建和 CI 不证明烧录、屏幕显示、按键动作、背光、供电、接线、稳定性或电气安全。",
         "不是模拟器、ROM 分发、完整游戏机、消费电子、量产设计或生产系统。"
       ]
+    },
+    {
+      "name": "基于STM32F103的衣柜环境监测与自动通风控制系统",
+      "repo": "https://github.com/rongyishuaige7/stm32f103-wardrobe-environment-monitoring-ventilation-system",
+      "default_branch": "main",
+      "head_sha": "b7fef464bf197aab55dfb282f921a8a3d9c06614",
+      "platform": "STM32F103 · C · PlatformIO · STM32Cube · DHT11 · MQ135 · OLED",
+      "summary": "基于 STM32F103、DHT11、MQ135 原始 ADC、OLED 与默认关闭风扇输出的衣柜环境监测和通风控制教学原型。",
+      "build": {
+        "status": "passed",
+        "run_url": "https://github.com/rongyishuaige7/stm32f103-wardrobe-environment-monitoring-ventilation-system/actions/runs/29641483562",
+        "head_sha": "b7fef464bf197aab55dfb282f921a8a3d9c06614",
+        "artifact_retention_days": null
+      },
+      "hardware_retest": {
+        "status": "not_retested",
+        "date": null,
+        "note": "公开范围扫描、仓库检查、15 项源码契约、STM32 安全默认与风扇精确 opt-in 隔离构建已由 exact-HEAD CI 验证；当前 STM32、DHT11、MQ135、OLED、UART、驱动器和风扇尚未按当前公开提交重新真机复测。"
+      },
+      "media_scope": "当前未公开实物照片、演示视频、原理图、PCB、EDA、Gerber 或制造文件；已公开固件、BOM、源码推导接口边界图、来源、状态与验证说明。",
+      "known_boundaries": [
+        "CI 不上传构建产物。",
+        "MQ 原始 ADC 与 demo_index 不是空气质量、甲醛、CO₂、烟雾、污染物或气体浓度；控制阈值不是健康、安全或环境标准。",
+        "默认不把 PB0/PB1 配置为输出，也不执行历史启动风扇测试；PB0/PB1 不得直接驱动电机，MQ 模块模拟输出必须先核对并调理至 STM32 3.3 V ADC 安全范围。",
+        "构建和 CI 不证明烧录、传感器读数、OLED、串口、风扇动作、接线、电气安全或长期稳定；本项目不是空气质量仪、家电、量产设计、无人值守或生产系统。"
+      ]
     }
   ]
 }
