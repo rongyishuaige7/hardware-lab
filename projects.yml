@@ -6,13 +6,13 @@
       "name": "基于ESP32-S3的视觉猜拳游戏",
       "repo": "https://github.com/rongyishuaige7/ESP32_RPS_Game",
       "default_branch": "main",
-      "head_sha": "c72349b5c70051ad07f451b3032e9b45e44d8dd7",
+      "head_sha": "85a508d55bf15422827a59276261f63739c836a8",
       "platform": "ESP32-S3 · C++ · PlatformIO · OV3660",
       "summary": "基于摄像头手势识别的剪刀石头布硬件游戏，包含 OLED、音频、RGB 反馈与可选 MJPEG 推流。",
       "build": {
         "status": "passed",
-        "run_url": "https://github.com/rongyishuaige7/ESP32_RPS_Game/actions/runs/29654421275",
-        "head_sha": "c72349b5c70051ad07f451b3032e9b45e44d8dd7",
+        "run_url": "https://github.com/rongyishuaige7/ESP32_RPS_Game/actions/runs/29656135651",
+        "head_sha": "85a508d55bf15422827a59276261f63739c836a8",
         "artifact_retention_days": 14
       },
       "hardware_retest": {
@@ -57,13 +57,13 @@
       "name": "基于STM32的多传感器数据采集系统",
       "repo": "https://github.com/rongyishuaige7/stm32-multisensor-data-acquisition",
       "default_branch": "main",
-      "head_sha": "8c32ce889fc5a421ad197a265baf7e986e858152",
+      "head_sha": "a367f3b111024b97ab62981c87b58e10a1dca49f",
       "platform": "STM32F103 · C · PlatformIO · STM32Cube HAL · W25Q64 · ESP-01S",
       "summary": "多传感器数据采集教学原型，包含 Flash 历史与离线缓存、ESP-01S AT 联网、TCP JSON 工具、OLED 与告警。",
       "build": {
         "status": "passed",
-        "run_url": "https://github.com/rongyishuaige7/stm32-multisensor-data-acquisition/actions/runs/29651843699",
-        "head_sha": "8c32ce889fc5a421ad197a265baf7e986e858152",
+        "run_url": "https://github.com/rongyishuaige7/stm32-multisensor-data-acquisition/actions/runs/29656153985",
+        "head_sha": "a367f3b111024b97ab62981c87b58e10a1dca49f",
         "artifact_retention_days": 14
       },
       "hardware_retest": {
@@ -83,13 +83,13 @@
       "name": "基于LoRa和ESP32的仓库物品追踪定位系统",
       "repo": "https://github.com/rongyishuaige7/lora-warehouse-tracking-system",
       "default_branch": "main",
-      "head_sha": "e5749c2b4c1400d3a0cea7452b292619ea4e3ba9",
+      "head_sha": "f4508a99157bca19a3c2d55afda7884185ef2364",
       "platform": "ESP32 · LoRa/SX1278 · C++ · PlatformIO · Flask · SQLite · Kotlin",
       "summary": "仓库区域追踪教学原型，包含 LoRa 标签/网关固件、Flask/SQLite 服务与 Kotlin Android 客户端。",
       "build": {
         "status": "passed",
-        "run_url": "https://github.com/rongyishuaige7/lora-warehouse-tracking-system/actions/runs/29652821278",
-        "head_sha": "e5749c2b4c1400d3a0cea7452b292619ea4e3ba9",
+        "run_url": "https://github.com/rongyishuaige7/lora-warehouse-tracking-system/actions/runs/29656149273",
+        "head_sha": "f4508a99157bca19a3c2d55afda7884185ef2364",
         "artifact_retention_days": 14
       },
       "hardware_retest": {
@@ -109,13 +109,13 @@
       "name": "基于多路ESP32-CAM的车流量自适应交通信号控制系统",
       "repo": "https://github.com/rongyishuaige7/adaptive-traffic-signal-system",
       "default_branch": "main",
-      "head_sha": "95819f1696252fabd776c6193e88fe5a6b8c5330",
+      "head_sha": "58c9bab197f1cc5bcdcce07f597d7c54062ce622",
       "platform": "ESP32-CAM × 4 · ESP32 · YOLOv8 · FastAPI · Vue 3 · WebSocket",
       "summary": "四路 ESP32-CAM 车流量自适应交通信号教学原型，包含 YOLOv8 跟踪/过线计数、FastAPI、Vue 3、WebSocket、12 路信号灯和四块 OLED。",
       "build": {
         "status": "passed",
-        "run_url": "https://github.com/rongyishuaige7/adaptive-traffic-signal-system/actions/runs/29653738361",
-        "head_sha": "95819f1696252fabd776c6193e88fe5a6b8c5330",
+        "run_url": "https://github.com/rongyishuaige7/adaptive-traffic-signal-system/actions/runs/29656136601",
+        "head_sha": "58c9bab197f1cc5bcdcce07f597d7c54062ce622",
         "artifact_retention_days": 14
       },
       "hardware_retest": {
@@ -135,13 +135,13 @@
       "name": "基于ESP32-S3的健康科普语音交互终端",
       "repo": "https://github.com/rongyishuaige7/esp32-s3-health-voice-terminal",
       "default_branch": "main",
-      "head_sha": "e805b7011e307ce9340939b9101af6ac7c251855",
+      "head_sha": "1192c4f6144280eee59dcfc81cd8ee7b4c456488",
       "platform": "ESP32-S3 · ESP-IDF · ESP-SR · 讯飞 · DeepSeek · LVGL · FreeRTOS",
       "summary": "基于本地唤醒、讯飞流式 ASR/TTS、DeepSeek SSE、双 I²S 音频和 LVGL 显示的健康科普语音终端教学原型。",
       "build": {
         "status": "passed",
-        "run_url": "https://github.com/rongyishuaige7/esp32-s3-health-voice-terminal/actions/runs/29651659546",
-        "head_sha": "e805b7011e307ce9340939b9101af6ac7c251855",
+        "run_url": "https://github.com/rongyishuaige7/esp32-s3-health-voice-terminal/actions/runs/29656141551",
+        "head_sha": "1192c4f6144280eee59dcfc81cd8ee7b4c456488",
         "artifact_retention_days": 14
       },
       "hardware_retest": {
@@ -161,13 +161,13 @@
       "name": "基于树莓派和RFID的房卡管理系统",
       "repo": "https://github.com/rongyishuaige7/raspberry-pi-rfid-room-card-system",
       "default_branch": "main",
-      "head_sha": "aea787091a0d7ddef7cd3484d7eda808edd57561",
+      "head_sha": "6179e5fab8c1103fb3477a15369d75717bcfca6d",
       "platform": "Raspberry Pi · Python · Qt/C++ · MariaDB · RC522 · SG90",
       "summary": "双 RC522 房卡管理教学原型，包含树莓派 Python 服务、MariaDB、Qt/C++ 管理端、服务端角色权限、房态与审计记录。",
       "build": {
         "status": "passed",
-        "run_url": "https://github.com/rongyishuaige7/raspberry-pi-rfid-room-card-system/actions/runs/29652204023",
-        "head_sha": "aea787091a0d7ddef7cd3484d7eda808edd57561",
+        "run_url": "https://github.com/rongyishuaige7/raspberry-pi-rfid-room-card-system/actions/runs/29656151724",
+        "head_sha": "6179e5fab8c1103fb3477a15369d75717bcfca6d",
         "artifact_retention_days": 14
       },
       "hardware_retest": {
@@ -187,13 +187,13 @@
       "name": "基于STM32的触摸与隔空手势控制系统",
       "repo": "https://github.com/rongyishuaige7/stm32-touch-gesture-control-system",
       "default_branch": "main",
-      "head_sha": "824b3138f669da167bc7427f590f8dfafd808773",
+      "head_sha": "75ac840d4c8463673e2e859e7c26392dd6df0319",
       "platform": "STM32F103 · C++ · PlatformIO · STM32Cube HAL · TTP223 · APDS-9960 · ESP-01S",
       "summary": "使用四路电容触摸和 APDS-9960 隔空手势控制四路 LED，并通过 ESP-01S 本地热点展示状态与诊断的教学原型。",
       "build": {
         "status": "passed",
-        "run_url": "https://github.com/rongyishuaige7/stm32-touch-gesture-control-system/actions/runs/29651890391",
-        "head_sha": "824b3138f669da167bc7427f590f8dfafd808773",
+        "run_url": "https://github.com/rongyishuaige7/stm32-touch-gesture-control-system/actions/runs/29656155496",
+        "head_sha": "75ac840d4c8463673e2e859e7c26392dd6df0319",
         "artifact_retention_days": 14
       },
       "hardware_retest": {
@@ -213,13 +213,13 @@
       "name": "基于ESP32的智能闹钟系统",
       "repo": "https://github.com/rongyishuaige7/esp32-smart-alarm-clock",
       "default_branch": "main",
-      "head_sha": "371d05c4f1e6ceb5ea3f8433af75d355081e78cb",
+      "head_sha": "d183608bb9297fc1cc19f73cf1129e4144cff4d7",
       "platform": "ESP32 · Arduino · PlatformIO · Flutter · OLED · DHT11 · PIR · MAX98357A",
       "summary": "基于 ESP32、OLED、DHT11、PIR、MAX98357A 与 Flutter 局域网客户端的智能闹钟教学原型。",
       "build": {
         "status": "passed",
-        "run_url": "https://github.com/rongyishuaige7/esp32-smart-alarm-clock/actions/runs/29653301484",
-        "head_sha": "371d05c4f1e6ceb5ea3f8433af75d355081e78cb",
+        "run_url": "https://github.com/rongyishuaige7/esp32-smart-alarm-clock/actions/runs/29656144651",
+        "head_sha": "d183608bb9297fc1cc19f73cf1129e4144cff4d7",
         "artifact_retention_days": 14
       },
       "hardware_retest": {
@@ -239,13 +239,13 @@
       "name": "基于ESP32的智能药盒系统",
       "repo": "https://github.com/rongyishuaige7/esp32-smart-pillbox",
       "default_branch": "main",
-      "head_sha": "310f49fa6a70242992c3849d1c3bf18b1a2de9d0",
+      "head_sha": "dffd007a578b26b3f3732d732cc9d8f0a2e2cc56",
       "platform": "ESP32 · Arduino · PlatformIO · Flutter · PIR · HX711 · SPIFFS · HTTP",
       "summary": "基于 ESP32、双 PIR、双 HX711、RGB/蜂鸣器与 Flutter 局域网客户端的智能药盒教学原型。",
       "build": {
         "status": "passed",
-        "run_url": "https://github.com/rongyishuaige7/esp32-smart-pillbox/actions/runs/29652933103",
-        "head_sha": "310f49fa6a70242992c3849d1c3bf18b1a2de9d0",
+        "run_url": "https://github.com/rongyishuaige7/esp32-smart-pillbox/actions/runs/29656147110",
+        "head_sha": "dffd007a578b26b3f3732d732cc9d8f0a2e2cc56",
         "artifact_retention_days": 14
       },
       "hardware_retest": {
@@ -265,13 +265,13 @@
       "name": "基于ESP32的天气时钟",
       "repo": "https://github.com/rongyishuaige7/esp32-weather-clock",
       "default_branch": "main",
-      "head_sha": "a879b664c8934aaefdc2d9abfb58d292ccd6ebdf",
+      "head_sha": "4d80a3bd1ee13fc500467258a2923f83fcd47555",
       "platform": "ESP32 · Arduino · PlatformIO · DHT22 · BH1750 · DS3231 · SSD1306 · Wi-Fi",
       "summary": "基于 ESP32、DHT22、BH1750、DS3231、SSD1306 OLED 与本地 AP 配网的天气时钟教学原型。",
       "build": {
         "status": "passed",
-        "run_url": "https://github.com/rongyishuaige7/esp32-weather-clock/actions/runs/29652730458",
-        "head_sha": "a879b664c8934aaefdc2d9abfb58d292ccd6ebdf",
+        "run_url": "https://github.com/rongyishuaige7/esp32-weather-clock/actions/runs/29656148143",
+        "head_sha": "4d80a3bd1ee13fc500467258a2923f83fcd47555",
         "artifact_retention_days": 14
       },
       "hardware_retest": {
@@ -291,13 +291,13 @@
       "name": "基于ESP32-S3的多传感器智能安全监测系统",
       "repo": "https://github.com/rongyishuaige7/esp32-s3-smart-safety-monitor",
       "default_branch": "main",
-      "head_sha": "1559ef04e917bce68fe0b1bdb442990627fe7801",
+      "head_sha": "f2d0cf36adb7cbc828a5b19a53ee1f167d140999",
       "platform": "ESP32-S3 · ESP-IDF · PlatformIO · FreeRTOS · MQ-2 · MQ-5 · SSD1306 · HC-SR04",
       "summary": "ESP32-S3 多传感器监测教学原型，包含 MQ-2/MQ-5 原始采样、火焰与超声波输入、OLED、本地状态页和低压执行器分时逻辑。",
       "build": {
         "status": "passed",
-        "run_url": "https://github.com/rongyishuaige7/esp32-s3-smart-safety-monitor/actions/runs/29654282866",
-        "head_sha": "1559ef04e917bce68fe0b1bdb442990627fe7801",
+        "run_url": "https://github.com/rongyishuaige7/esp32-s3-smart-safety-monitor/actions/runs/29656143573",
+        "head_sha": "f2d0cf36adb7cbc828a5b19a53ee1f167d140999",
         "artifact_retention_days": 14
       },
       "hardware_retest": {
@@ -318,13 +318,13 @@
       "name": "基于树莓派的多传感器小型气象站",
       "repo": "https://github.com/rongyishuaige7/raspberry-pi-weather-station",
       "default_branch": "main",
-      "head_sha": "bf46a455b953cdbaf25d0cc49d36f94fbe040a2d",
+      "head_sha": "a25218a21a02c0cad7f029a266122fed53511d73",
       "platform": "Raspberry Pi · Python · Flask · MySQL · C# · Avalonia · DHT22 · BH1750",
       "summary": "树莓派采集 DHT22 温湿度与 BH1750 光照，写入 MySQL，经 Flask REST API 供 Avalonia / C# 上位机查看、查询历史和维护阈值的教学原型。",
       "build": {
         "status": "passed",
-        "run_url": "https://github.com/rongyishuaige7/raspberry-pi-weather-station/actions/runs/29652654538",
-        "head_sha": "bf46a455b953cdbaf25d0cc49d36f94fbe040a2d",
+        "run_url": "https://github.com/rongyishuaige7/raspberry-pi-weather-station/actions/runs/29656153092",
+        "head_sha": "a25218a21a02c0cad7f029a266122fed53511d73",
         "artifact_retention_days": 14
       },
       "hardware_retest": {
@@ -345,13 +345,13 @@
       "name": "基于ESP32的婴儿状态监测原型",
       "repo": "https://github.com/rongyishuaige7/esp32-baby-monitor",
       "default_branch": "main",
-      "head_sha": "d4573b0e155e358d391e43946d1317f759f680f2",
+      "head_sha": "e5fa41b4d90e21aa3ca5d618042cd589fb40c7ca",
       "platform": "ESP32 · Arduino · PlatformIO · HC-SR04 · DHT11 · 模拟声音输入 · WebServer",
       "summary": "两路距离、温湿度与声音幅度输入驱动 ESP32 中的演示级固定阈值分类、RGB/蜂鸣器本地反馈和可选可信局域网 JSON 接口。",
       "build": {
         "status": "passed",
-        "run_url": "https://github.com/rongyishuaige7/esp32-baby-monitor/actions/runs/29652600710",
-        "head_sha": "d4573b0e155e358d391e43946d1317f759f680f2",
+        "run_url": "https://github.com/rongyishuaige7/esp32-baby-monitor/actions/runs/29656138673",
+        "head_sha": "e5fa41b4d90e21aa3ca5d618042cd589fb40c7ca",
         "artifact_retention_days": 14
       },
       "hardware_retest": {
@@ -372,13 +372,13 @@
       "name": "基于ESP32的蜂箱多传感器数据采集与局域网展示原型",
       "repo": "https://github.com/rongyishuaige7/esp32-beehive-monitor",
       "default_branch": "main",
-      "head_sha": "377cc07c2feef2a96e6d1dd441b4c70484af7e82",
+      "head_sha": "933d620355f8d729cbd5934940e97189873dc432",
       "platform": "ESP32 · Arduino · PlatformIO · Flutter · DHT11 · BH1750 · BMP280 · 模拟 ADC · 本地 HTTP",
       "summary": "ESP32 读取 DHT11、BH1750、BMP280、模拟声音幅度和 MQ-2 原始 ADC；使用者本地配置后，Flutter 客户端可在可信局域网请求一条本地 JSON 响应。",
       "build": {
         "status": "passed",
-        "run_url": "https://github.com/rongyishuaige7/esp32-beehive-monitor/actions/runs/29653076580",
-        "head_sha": "377cc07c2feef2a96e6d1dd441b4c70484af7e82",
+        "run_url": "https://github.com/rongyishuaige7/esp32-beehive-monitor/actions/runs/29656139471",
+        "head_sha": "933d620355f8d729cbd5934940e97189873dc432",
         "artifact_retention_days": 14
       },
       "hardware_retest": {
@@ -426,13 +426,13 @@
       "name": "基于ESP32的智能化妆品收纳与环境管理系统",
       "repo": "https://github.com/rongyishuaige7/esp32-smart-makeup-cabinet",
       "default_branch": "main",
-      "head_sha": "2c77ffa0383594b673d0879ca0aa078452b06ebc",
+      "head_sha": "f732a2c2685956c116916c2b92e60c680d88f22a",
       "platform": "ESP32 · Arduino · PlatformIO · Flutter · DHT11 · GUVA-S12SD · PIR · RC522 · SSD1306 · WS2812B · 可选本地 HTTP",
       "summary": "基于 ESP32、DHT11、GUVA-S12SD、PIR、RC522 与 Flutter 的智能化妆品收纳与环境管理教学原型；公开默认不提供 Wi-Fi/HTTP 或实体输出。",
       "build": {
         "status": "passed",
-        "run_url": "https://github.com/rongyishuaige7/esp32-smart-makeup-cabinet/actions/runs/29653459725",
-        "head_sha": "2c77ffa0383594b673d0879ca0aa078452b06ebc",
+        "run_url": "https://github.com/rongyishuaige7/esp32-smart-makeup-cabinet/actions/runs/29656145890",
+        "head_sha": "f732a2c2685956c116916c2b92e60c680d88f22a",
         "artifact_retention_days": null
       },
       "hardware_retest": {
@@ -452,13 +452,13 @@
       "name": "基于ESP32-C3的多传感器健康数据展示手环原型",
       "repo": "https://github.com/rongyishuaige7/esp32-c3-smart-band",
       "default_branch": "main",
-      "head_sha": "0afa24f5b4d0b322289f81e6fa2877dd6c815956",
+      "head_sha": "72fb4d9921f757b022a0e8f9a03a4062ec871fcf",
       "platform": "ESP32-C3 · Arduino · PlatformIO · NimBLE · Flutter · MAX30102 · MPU6050 · DS18B20 · GPS · SSD1306",
       "summary": "基于 ESP32-C3、MAX30102、MPU6050、DS18B20、GPS、OLED 与 Flutter BLE 客户端的多传感器数据展示教学原型。",
       "build": {
         "status": "passed",
-        "run_url": "https://github.com/rongyishuaige7/esp32-c3-smart-band/actions/runs/29653869018",
-        "head_sha": "0afa24f5b4d0b322289f81e6fa2877dd6c815956",
+        "run_url": "https://github.com/rongyishuaige7/esp32-c3-smart-band/actions/runs/29656140601",
+        "head_sha": "72fb4d9921f757b022a0e8f9a03a4062ec871fcf",
         "artifact_retention_days": null
       },
       "hardware_retest": {
@@ -478,13 +478,13 @@
       "name": "基于Arduino的多传感器数据展示与音频联动教学原型",
       "repo": "https://github.com/rongyishuaige7/arduino-multisensor-audio-demo",
       "default_branch": "main",
-      "head_sha": "b62c89df4211b62b50e117d335042974f96b567c",
+      "head_sha": "2a6dcf099d849ccb6203579343de7430803ed776",
       "platform": "Arduino Uno · PlatformIO · Flutter · Android · Classic Bluetooth SPP · HC-05 · MAX30100 · DHT11 · DS18B20 · BH1750 · MPU6050 · DFPlayer Mini",
       "summary": "基于 Arduino Uno、MAX30100、DHT11、DS18B20、BH1750、MPU6050、HC-05、DFPlayer 与 Flutter Android 客户端的多传感器数据展示与音频联动教学原型。",
       "build": {
         "status": "passed",
-        "run_url": "https://github.com/rongyishuaige7/arduino-multisensor-audio-demo/actions/runs/29651364207",
-        "head_sha": "b62c89df4211b62b50e117d335042974f96b567c",
+        "run_url": "https://github.com/rongyishuaige7/arduino-multisensor-audio-demo/actions/runs/29656137667",
+        "head_sha": "2a6dcf099d849ccb6203579343de7430803ed776",
         "artifact_retention_days": null
       },
       "hardware_retest": {
@@ -505,13 +505,13 @@
       "name": "基于ESP32-S3和Avalonia的智能农业环境监测系统",
       "repo": "https://github.com/rongyishuaige7/esp32-s3-smart-agriculture-monitoring-system",
       "default_branch": "main",
-      "head_sha": "3f3dfab05093bf654bfa54f3da347ac1ed78e678",
+      "head_sha": "c98d461e00992eb95e97a63abac63f5f00a1bf2f",
       "platform": "ESP32-S3 · Arduino · PlatformIO · Avalonia · .NET 8 · DHT11 · BH1750 · ACD10 · BMP280 · SSD1306",
       "summary": "基于 ESP32-S3、DHT11、BH1750、ACD10、BMP280、OLED 与 Avalonia/.NET 8 示例数据界面的环境监测教学原型。",
       "build": {
         "status": "passed",
-        "run_url": "https://github.com/rongyishuaige7/esp32-s3-smart-agriculture-monitoring-system/actions/runs/29654162877",
-        "head_sha": "3f3dfab05093bf654bfa54f3da347ac1ed78e678",
+        "run_url": "https://github.com/rongyishuaige7/esp32-s3-smart-agriculture-monitoring-system/actions/runs/29656142615",
+        "head_sha": "c98d461e00992eb95e97a63abac63f5f00a1bf2f",
         "artifact_retention_days": null
       },
       "hardware_retest": {
@@ -583,13 +583,13 @@
       "name": "基于STM32F103的衣柜环境监测与自动通风控制系统",
       "repo": "https://github.com/rongyishuaige7/stm32f103-wardrobe-environment-monitoring-ventilation-system",
       "default_branch": "main",
-      "head_sha": "3e1d6ff42a2df4d23f86b4a17957740f0a180f9b",
+      "head_sha": "7bbcd66e9d28d0bdabce15296926c119c8146bff",
       "platform": "STM32F103 · C · PlatformIO · STM32Cube · DHT11 · MQ135 · OLED",
       "summary": "基于 STM32F103、DHT11、MQ135 原始 ADC、OLED 与默认关闭风扇输出的衣柜环境监测和通风控制教学原型。",
       "build": {
         "status": "passed",
-        "run_url": "https://github.com/rongyishuaige7/stm32f103-wardrobe-environment-monitoring-ventilation-system/actions/runs/29652130786",
-        "head_sha": "3e1d6ff42a2df4d23f86b4a17957740f0a180f9b",
+        "run_url": "https://github.com/rongyishuaige7/stm32f103-wardrobe-environment-monitoring-ventilation-system/actions/runs/29656264221",
+        "head_sha": "7bbcd66e9d28d0bdabce15296926c119c8146bff",
         "artifact_retention_days": null
       },
       "hardware_retest": {
@@ -609,13 +609,13 @@
       "name": "基于树莓派的居家环境与活动状态监测教学原型",
       "repo": "https://github.com/rongyishuaige7/raspberry-pi-home-environment-activity-monitoring-demo",
       "default_branch": "main",
-      "head_sha": "d18c4a52f8c6503d0519d70c21bb697515120fb4",
+      "head_sha": "6d731dc17bb1f401952a82b535eb553a32d23069",
       "platform": "Raspberry Pi · Python · Flask · Socket.IO · MySQL · Kotlin · Jetpack Compose",
       "summary": "基于树莓派、Flask/MySQL 后端与 Android Compose 查看端的居家环境和活动状态监测教学原型。",
       "build": {
         "status": "passed",
-        "run_url": "https://github.com/rongyishuaige7/raspberry-pi-home-environment-activity-monitoring-demo/actions/runs/29652508046",
-        "head_sha": "d18c4a52f8c6503d0519d70c21bb697515120fb4",
+        "run_url": "https://github.com/rongyishuaige7/raspberry-pi-home-environment-activity-monitoring-demo/actions/runs/29656150545",
+        "head_sha": "6d731dc17bb1f401952a82b535eb553a32d23069",
         "artifact_retention_days": null
       },
       "hardware_retest": {
