@@ -19,14 +19,13 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 PROJECTS_FILE = ROOT / "projects.yml"
 README_FILE = ROOT / "README.md"
-EXPECTED_PROJECT_COUNT = 24
+EXPECTED_PROJECT_COUNT = 22
 NO_ARTIFACT_BOUNDARY = "CI 不上传构建产物"
 SHA_RE = re.compile(r"^[0-9a-f]{40}$")
 REPO_RE = re.compile(r"^https://github\.com/([^/]+)/([^/]+)$")
 RUN_RE = re.compile(
     r"^https://github\.com/([^/]+)/([^/]+)/actions/runs/([0-9]+)$"
 )
-ALLOWED_RETEST = {"not_retested", "historical_evidence_only", "reverified"}
 REQUIRED_KEYS = {
     "name",
     "repo",
@@ -35,7 +34,6 @@ REQUIRED_KEYS = {
     "platform",
     "summary",
     "build",
-    "hardware_retest",
     "media_scope",
     "known_boundaries",
 }
@@ -153,16 +151,6 @@ def validate_local(data: dict[str, Any]) -> list[dict[str, Any]]:
         ):
             fail(f"{name}: artifact_retention_days must be integer 14 or null")
 
-        retest = project.get("hardware_retest")
-        if not isinstance(retest, dict) or retest.get("status") not in ALLOWED_RETEST:
-            fail(f"{name}: invalid hardware_retest.status")
-        require_nonempty_string(retest, "note", f"{name} hardware_retest")
-        if retest["status"] == "not_retested" and retest.get("date") is not None:
-            fail(f"{name}: not_retested must not have a date")
-        if retest["status"] != "not_retested" and not re.fullmatch(
-            r"\d{4}-\d{2}-\d{2}", str(retest.get("date", ""))
-        ):
-            fail(f"{name}: dated evidence must use YYYY-MM-DD")
 
         boundaries = project.get("known_boundaries")
         if not isinstance(boundaries, list) or not boundaries:
