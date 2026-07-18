@@ -28,7 +28,7 @@
 - **构建证据：** [`aacb1c0c3beb`](https://github.com/rongyishuaige7/esp32-s3-multimodal-smart-pot/commit/aacb1c0c3beb4add79a740d838166c63cf95b10c) · [Actions 成功](https://github.com/rongyishuaige7/esp32-s3-multimodal-smart-pot/actions/runs/29518255431)
 - **真机状态：** 两张历史照片显示定制 PCB、传感器读数、本地彩屏和配套 App 界面；当前公开提交未重新刷写并逐项真机验收。
 - **公开范围：** 公开两张去除 EXIF/GPS 的历史实物照片，以及原理图 PDF、EasyEDA PCB JSON、BOM 和 Gerber/钻孔文件；没有演示视频，App 源码未找回。
-- **边界：** 历史照片不证明当前公开提交已经完成真机复测。 EDA 的 JSN-SR04T 引脚与公开固件不一致。 EDA 控制器标注与当前 PlatformIO 4 MB Flash 配置存在版本边界。 局域网 HTTP 控制无认证和加密，不应直接暴露公网。
+- **边界：** 项目照片展示拍摄时的原型外观；真机复测情况以项目状态为准。EDA 的 JSN-SR04T 引脚与公开固件不一致。 EDA 控制器标注与当前 PlatformIO 4 MB Flash 配置存在版本边界。 局域网 HTTP 控制无认证和加密，不应直接暴露公网。
 
 ### [基于STM32的多传感器数据采集系统](https://github.com/rongyishuaige7/stm32-multisensor-data-acquisition)
 
