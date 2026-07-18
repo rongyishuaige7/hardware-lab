@@ -603,6 +603,32 @@
         "默认不把 PB0/PB1 配置为输出，也不执行历史启动风扇测试；PB0/PB1 不得直接驱动电机，MQ 模块模拟输出必须先核对并调理至 STM32 3.3 V ADC 安全范围。",
         "构建和 CI 不证明烧录、传感器读数、OLED、串口、风扇动作、接线、电气安全或长期稳定；本项目不是空气质量仪、家电、量产设计、无人值守或生产系统。"
       ]
+    },
+    {
+      "name": "基于树莓派的居家环境与活动状态监测教学原型",
+      "repo": "https://github.com/rongyishuaige7/raspberry-pi-home-environment-activity-monitoring-demo",
+      "default_branch": "main",
+      "head_sha": "e7fa2eddce185a7769f038bcbcf8c5725f53a8ab",
+      "platform": "Raspberry Pi · Python · Flask · Socket.IO · MySQL · Kotlin · Jetpack Compose",
+      "summary": "基于树莓派、Flask/MySQL 后端与 Android Compose 查看端的居家环境和活动状态监测教学原型。",
+      "build": {
+        "status": "passed",
+        "run_url": "https://github.com/rongyishuaige7/raspberry-pi-home-environment-activity-monitoring-demo/actions/runs/29643779848",
+        "head_sha": "e7fa2eddce185a7769f038bcbcf8c5725f53a8ab",
+        "artifact_retention_days": null
+      },
+      "hardware_retest": {
+        "status": "not_retested",
+        "date": null,
+        "note": "Python 编译、11 项后端与源码合同、Android Gradle test task（NO-SOURCE）、lint、debug assembly、敏感信息和精确公开清单已由 exact-HEAD CI 验证；当前树莓派、传感器、继电器、蜂鸣器、摄像头和 Android 尚未按当前公开提交重新真机复测。"
+      },
+      "media_scope": "已公开后端、树莓派适配与软件模拟器、Android 源码、BOM、信号级接线说明、来源、状态、隐私和验证说明；当前未公开 APK、实物照片、演示视频、界面截图、原理图、PCB、EDA、Gerber 或制造文件。",
+      "known_boundaries": [
+        "CI 不上传构建产物。",
+        "MQ-7 数字 GPIO 只表示未标定教学阈值事件，不是 CO 浓度、燃气泄漏或安全报警；MPU6050 阈值不能可靠判断人员跌倒；图片路径不是身份认证。",
+        "继电器、蜂鸣器和摄像头默认关闭；HTTP/Socket.IO 共享 Token 仅适合隔离实验网络，不替代 TLS、账号、密钥轮换或可靠告警。",
+        "构建和 CI 不证明实体传感器、执行器、摄像头、MySQL 部署、通知送达、电气安全或长期稳定；本项目不是医疗、养老看护、燃气报警、生命安全、门禁认证、消费产品或生产系统。"
+      ]
     }
   ]
 }
