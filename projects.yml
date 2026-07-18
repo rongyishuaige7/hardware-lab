@@ -551,6 +551,32 @@
         "构建和 CI 不证明烧录、OV7670、PIR、USB-TTL、SYN6288、扬声器、图像质量、串口端到端或电气安全。",
         "不是门禁、门锁、安防、身份认证、人员追踪、可靠提醒、无人值守或生产系统。"
       ]
+    },
+    {
+      "name": "基于ESP32和ILI9341的8键掌机界面教学原型",
+      "repo": "https://github.com/rongyishuaige7/esp32-ili9341-handheld-demo",
+      "default_branch": "main",
+      "head_sha": "12ce3a003f28f6b8b007e6f26c6a97a77449d180",
+      "platform": "ESP32 · Arduino · PlatformIO · ILI9341 · TFT_eSPI · 8 键 GPIO",
+      "summary": "基于 ESP32、ILI9341 SPI 彩屏与 8 个按键的离线掌机界面教学 Demo，包含启动页、菜单、按键测试和方块移动。",
+      "build": {
+        "status": "passed",
+        "run_url": "https://github.com/rongyishuaige7/esp32-ili9341-handheld-demo/actions/runs/29639425461",
+        "head_sha": "12ce3a003f28f6b8b007e6f26c6a97a77449d180",
+        "artifact_retention_days": null
+      },
+      "hardware_retest": {
+        "status": "not_retested",
+        "date": null,
+        "note": "公开范围扫描、仓库检查、7 项源码契约、ESP32 默认与背光 opt-in 编译已由 exact-HEAD CI 验证；当前 ESP32、ILI9341、8 个按键、背光、供电与完整交互尚未按当前公开提交重新真机复测。"
+      },
+      "media_scope": "当前未公开实物照片、演示视频、原理图、PCB、EDA、Gerber 或制造文件；已公开固件、BOM、源码推导接线边界图、控制、来源、状态与验证说明。",
+      "known_boundaries": [
+        "CI 不上传构建产物。",
+        "默认不驱动 GPIO21 背光候选脚；GPIO5 参与 ESP32 启动配置，模块电压、逻辑电平、背光电流与供电必须按精确实物重新核对。",
+        "构建和 CI 不证明烧录、屏幕显示、按键动作、背光、供电、接线、稳定性或电气安全。",
+        "不是模拟器、ROM 分发、完整游戏机、消费电子、量产设计或生产系统。"
+      ]
     }
   ]
 }
