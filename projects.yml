@@ -556,13 +556,13 @@
       "name": "基于ESP32和ILI9341的8键掌机界面教学原型",
       "repo": "https://github.com/rongyishuaige7/esp32-ili9341-handheld-demo",
       "default_branch": "main",
-      "head_sha": "12ce3a003f28f6b8b007e6f26c6a97a77449d180",
+      "head_sha": "ade1f0e54cf546c0b3fca674bb1947af45387f00",
       "platform": "ESP32 · Arduino · PlatformIO · ILI9341 · TFT_eSPI · 8 键 GPIO",
       "summary": "基于 ESP32、ILI9341 SPI 彩屏与 8 个按键的离线掌机界面教学 Demo，包含启动页、菜单、按键测试和方块移动。",
       "build": {
         "status": "passed",
-        "run_url": "https://github.com/rongyishuaige7/esp32-ili9341-handheld-demo/actions/runs/29639425461",
-        "head_sha": "12ce3a003f28f6b8b007e6f26c6a97a77449d180",
+        "run_url": "https://github.com/rongyishuaige7/esp32-ili9341-handheld-demo/actions/runs/29639660261",
+        "head_sha": "ade1f0e54cf546c0b3fca674bb1947af45387f00",
         "artifact_retention_days": null
       },
       "hardware_retest": {
