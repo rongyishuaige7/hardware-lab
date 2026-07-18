@@ -530,13 +530,13 @@
       "name": "基于STM32F103和OV7670的智能门口提醒系统",
       "repo": "https://github.com/rongyishuaige7/stm32f103-ov7670-smart-door-reminder-system",
       "default_branch": "main",
-      "head_sha": "aa515aab97cf1369ee1145d8c03c60b4e0192654",
+      "head_sha": "bd392aa894e675eae3d58335ba74e18821e9d273",
       "platform": "STM32F103 · C · PlatformIO · STM32Cube HAL · OV7670 · PIR · SYN6288 · pyserial",
       "summary": "基于 STM32F103、OV7670、PIR、SYN6288 与受限本地串口协议的智能门口提醒教学原型。",
       "build": {
         "status": "passed",
-        "run_url": "https://github.com/rongyishuaige7/stm32f103-ov7670-smart-door-reminder-system/actions/runs/29635341165",
-        "head_sha": "aa515aab97cf1369ee1145d8c03c60b4e0192654",
+        "run_url": "https://github.com/rongyishuaige7/stm32f103-ov7670-smart-door-reminder-system/actions/runs/29636386247",
+        "head_sha": "bd392aa894e675eae3d58335ba74e18821e9d273",
         "artifact_retention_days": null
       },
       "hardware_retest": {
